@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#071521">
+<meta name="theme-color" content="#f5f3ef">
 <meta name="description" content="追觅个护模具实验室：用示意图、小游戏和模拟考试学习注塑模具知识。">
-<title>追觅个护模具实验室</title>
+<title>CMF 个护模具实验室｜用图和实验理解注塑</title>
 <style>
 :root{--bg:#071521;--panel:#0d2231;--panel2:#122d40;--line:#2a4e65;--ink:#f5f9fc;--muted:#a7bdcc;--cyan:#43ded0;--yellow:#ffc258;--red:#ff6478;--green:#65e097;--blue:#5da9f6;--purple:#b899ff;--shadow:0 24px 70px #0007}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:radial-gradient(circle at 12% 0,#164b69 0,transparent 30rem),radial-gradient(circle at 88% 25%,#102e45 0,transparent 28rem),var(--bg);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:3px}
@@ -30,18 +30,44 @@
 
 .module-return{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #5b7a45!important;border-radius:9px!important;background:#17291a!important;color:#b9f34a!important}.module-return:hover{background:#b9f34a!important;color:#142207!important}.back-material{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;align-items:center;gap:8px;padding:12px 15px;border:1px solid #5b7a45;border-radius:999px;background:#17291aee;color:#b9f34a;font-size:12px;font-weight:950;box-shadow:0 16px 35px #0008;backdrop-filter:blur(12px)}.back-material:hover{background:#b9f34a;color:#142207}@media(max-width:720px){.back-material{right:10px;bottom:10px}.nav .module-return{order:-1;width:100%;justify-content:center}}
 
+
+/* Unified CMF light launch system */
+:root{--bg:#f5f3ef;--panel:#ffffff;--panel2:#eeeae4;--line:#d7d1ca;--ink:#171615;--muted:#716d68;--cyan:#b74d43;--yellow:#c57a45;--red:#b4433c;--green:#487560;--blue:#6f8e9e;--purple:#8f7ca6;--shadow:0 26px 80px #43372b14}
+html{background:var(--bg)}body{background:radial-gradient(circle at 10% 0,#fff 0,transparent 31rem),radial-gradient(circle at 92% 25%,#eaded5 0,transparent 30rem),var(--bg);color:var(--ink)}
+.top{min-height:72px;background:#f5f3efdf;border-bottom:1px solid #d8d2ca99;box-shadow:0 10px 38px #43372b0c;backdrop-filter:blur(18px)}
+.brand{color:var(--ink);letter-spacing:-.02em}.logo{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font:700 10px Inter,Arial;letter-spacing:.04em;box-shadow:none}
+.nav{gap:4px}.nav a{color:var(--muted);font-size:12px;border-radius:999px}.nav a:hover,.nav a.active{background:#fff;color:var(--ink)}.nav .module-return{border:0!important;border-radius:999px!important;background:#fff!important;color:var(--cyan)!important;box-shadow:none}.nav .module-return:hover{background:var(--ink)!important;color:#fff!important}
+.loss-pill{border:1px solid #decfc1;background:#f8eee5;color:#816c5b}.loss-pill b{color:var(--red)}
+.page{width:min(1240px,calc(100% - 40px));padding:78px 0 100px}.eyebrow{color:var(--cyan);font-size:10px;letter-spacing:.18em}.page-title{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.065em;font-weight:650}.lead{color:var(--muted);line-height:1.8}
+.btn{border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);box-shadow:none}.btn:hover{border-color:var(--ink);color:var(--ink)}.btn.primary{border-color:var(--ink);background:var(--ink);color:#fff}.btn.yellow{border-color:var(--cyan);background:var(--cyan);color:#fff}.btn.danger{border-color:#dcb2ad;background:#f9e8e6;color:var(--red)}
+.hero-card{padding:28px;border:0;border-radius:24px;background:#fff;box-shadow:var(--shadow)}.hero-card h2{font-size:24px}.flow-step{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent}.flow-step:last-child{border:0}.flow-step i{border-radius:50%;background:#f1e5df;color:var(--cyan)}.flow-step small{color:var(--muted)}.disclaimer{border-left:3px solid var(--yellow);background:#f8eee5;color:#816b58}
+.stats{gap:1px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stat{padding:22px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}.stat:last-child{border:0}.stat b{color:var(--ink);font-weight:600}.stat span{color:var(--muted)}
+.section-head h2{letter-spacing:-.05em}.section-head p{color:var(--muted)}
+.feature-grid,.module-grid{gap:1px;background:var(--line)}.feature,.module-card{border:0;border-radius:0;background:#fff;color:var(--ink)}.feature:hover,.module-card:hover{translate:0 -2px;border:0;background:#faf8f5}.feature p,.module-card p{color:var(--muted)}.module-card.done:after{background:#e5efe9;color:var(--green)}.module-card small{color:var(--cyan)}
+.search{border:0;border-bottom:1px solid #aaa39b;border-radius:0;background:transparent;color:var(--ink)}
+.lesson-shell{gap:16px}.lesson-copy,.sim-card,.quiz-card,.record-card,.support-card{border:0;border-radius:22px;background:#fff;box-shadow:0 14px 45px #43372b0c}.crumb{color:var(--cyan)}.lesson-copy .concept,.sim-card>p{color:var(--muted)}.topic-chips span{border-color:var(--line);background:#f6f3ef;color:#6f6a65}.keyline{border-left:4px solid var(--cyan);background:#f4e8e4;color:#624d47}
+.diagram{border:1px solid var(--line);background:linear-gradient(#f8f6f2dd,#f2eee8dd),repeating-linear-gradient(90deg,transparent 0 39px,#aaa29a20 40px),repeating-linear-gradient(0deg,transparent 0 39px,#aaa29a20 40px)}.diagram-legend{border-color:var(--line);background:#fffdf9ee}.diagram-legend span{color:#625f5a}.diagram-legend i{background:var(--cyan)}.diagram .d-label{color:#746f69}.mold-a,.mold-b{background:#8ca4af;border-color:#607984}.part-shape,.diagram.product .rib1,.diagram.product .rib2,.diagram.product .rib3{background:#d88376;border-color:#edb4aa}.arrow{background:var(--green)}.arrow:before{border-bottom-color:var(--green)}.arrow:after{color:var(--green)}.draft-measure{background:#fff;color:var(--green);box-shadow:0 4px 14px #43372b12}.diagram.fault{border-color:var(--red);box-shadow:inset 0 0 35px #b4433c18}.diagram.fault:after{background:var(--red)}
+.option{border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}.option:hover{border-color:var(--ink)}.option.correct{border-color:#9bc0aa;background:#e8f1eb;color:#315c48}.option.wrong{border-color:#d8a39e;background:#f8e8e6;color:var(--red)}.feedback.good{border-left-color:var(--green);background:#e8f1eb;color:#315c48}.feedback.bad{border-left-color:var(--red);background:#f8e8e6;color:#8d3f38}.loss-pop{background:#f1d8d5;color:var(--red)}
+.rules{border:0;border-radius:20px;background:#fff;box-shadow:var(--shadow)}.rules ul{color:var(--muted)}.exam-badge{border:0;border-radius:20px;background:#efe3da}.exam-badge b{color:var(--cyan)}.exam-badge span{color:#77645a}
+.quiz-progress{background:#dfdad4}.quiz-progress i{background:linear-gradient(90deg,var(--cyan),#d38a7f)}.quiz-card h2{color:var(--ink)}
+.result-hero{border:0;border-radius:22px;background:#fff;box-shadow:var(--shadow)}.result-score{color:var(--cyan)}.result-grid{gap:1px;background:var(--line)}.result-grid div{border:0;border-radius:0;background:#f5f2ee}.wrong-item{border:1px solid #dec4c0;background:#fbefed;color:var(--ink)}.wrong-item b{color:var(--red)}.wrong-item small{color:var(--muted)}
+.record-grid{gap:16px}.big-number{color:var(--cyan)}.progress-bar{background:#dfdad4}.progress-bar i{background:linear-gradient(90deg,var(--cyan),#d38a7f)}.mini-list div{border-bottom-color:var(--line);color:var(--muted)}.mini-list b{color:var(--ink)}
+.result-support{border:0;border-radius:18px;background:#f3eee8}.result-support p,.support-card p{color:var(--muted)}.support-note{border:0;background:#f8eee5;color:#816b58}.qr-frame{box-shadow:0 16px 45px #43372b14}
+.footer{border-top-color:var(--line);color:var(--muted)}.footer a{color:var(--cyan)}.toast{border:0;background:var(--ink);color:#fff;box-shadow:0 12px 40px #0002}
+.back-material{display:none!important}
+@media(max-width:900px){.top{display:block;padding:10px 16px}.brand{margin-bottom:8px}.nav{justify-content:flex-start;flex-wrap:nowrap;overflow:auto;padding-bottom:4px}.loss-pill{position:absolute;right:12px;top:12px}.page{width:min(100% - 24px,1240px)}}
+
 </style>
 </head>
 <body>
 <header class="top">
-<a class="brand" href="#home"><span class="logo">α</span><span>追觅个护模具实验室</span></a>
+<a class="brand" href="#home"><span class="logo">CMF</span><span>个护模具实验室</span></a>
 <nav class="nav" aria-label="主导航"><a class="module-return" href="index.html">← 粒子料实验室</a><a href="#home">首页</a><a href="#learn">知识学习</a><a href="#practice">互动练习</a><a href="#exam">模具科目一</a><a href="#record">学习记录</a><a href="#support">支持作者</a></nav>
 <div class="loss-pill">本次模拟损失 <b id="headerLoss">¥0</b></div>
 </header>
-<a class="back-material" href="index.html">← 返回粒子料实验室</a>
 <main>
 <section class="page" id="homePage">
-<div class="home-hero"><div class="home-copy"><p class="eyebrow">用图和游戏学懂注塑模具</p><h1 class="page-title">追觅个护<br>模具实验室</h1><p class="lead">先看简单示意图，再进入真实使用场景。通过点击、选择和模拟操作，理解模具为什么这样设计。</p><div class="actions"><a class="btn primary" href="#learn">开始学习 →</a><a class="btn yellow" href="#exam">直接模拟考试</a></div></div><aside class="hero-card"><p class="eyebrow">每个知识点都这样学</p><h2>看懂 → 操作 → 记住</h2><div class="flow"><div class="flow-step"><i>1</i><div><b>图解讲解</b><small>一张示意图，一句核心原理</small></div></div><div class="flow-step"><i>2</i><div><b>真实场景</b><small>模拟设计、开模和生产问题</small></div></div><div class="flow-step"><i>3</i><div><b>错误反馈</b><small>播放故障结果，模拟损失 +1元</small></div></div></div><div class="disclaimer">“模拟损失”只是帮助记忆的游戏数值，不是真实费用，也不需要支付。</div></aside></div>
+<div class="home-hero"><div class="home-copy"><p class="eyebrow">用图和游戏学懂注塑模具</p><h1 class="page-title">CMF 个护<br>模具实验室</h1><p class="lead">先看简单示意图，再进入真实使用场景。通过点击、选择和模拟操作，理解模具为什么这样设计。</p><div class="actions"><a class="btn primary" href="#learn">开始学习 →</a><a class="btn yellow" href="#exam">直接模拟考试</a></div></div><aside class="hero-card"><p class="eyebrow">每个知识点都这样学</p><h2>看懂 → 操作 → 记住</h2><div class="flow"><div class="flow-step"><i>1</i><div><b>图解讲解</b><small>一张示意图，一句核心原理</small></div></div><div class="flow-step"><i>2</i><div><b>真实场景</b><small>模拟设计、开模和生产问题</small></div></div><div class="flow-step"><i>3</i><div><b>错误反馈</b><small>播放故障结果，模拟损失 +1元</small></div></div></div><div class="disclaimer">“模拟损失”只是帮助记忆的游戏数值，不是真实费用，也不需要支付。</div></aside></div>
 <div class="stats"><div class="stat"><b>12</b><span>模具知识模块</span></div><div class="stat"><b>24</b><span>图解考试题</span></div><div class="stat"><b id="homeCompleted">0</b><span>已掌握模块</span></div><div class="stat"><b id="homeWrong">0</b><span>错题记录</span></div></div>
 <section class="quick"><div class="section-head"><div><p class="eyebrow">三种学习方式</p><h2>选择你现在需要的</h2></div></div><div class="feature-grid"><a class="feature" href="#learn"><span class="big-icon">🧭</span><h3>按知识分类学习</h3><p>从拔模、分型、浇口、顶出、滑块、冷却等模块中自由选择。</p></a><a class="feature" href="#practice"><span class="big-icon">🎮</span><h3>真实场景闯关</h3><p>连续完成10个随机场景，答错会看到实际故障后果。</p></a><a class="feature" href="#exam"><span class="big-icon">📝</span><h3>模具科目一</h3><p>随机抽取20道看图题，90分合格，错一题模拟损失加1元。</p></a></div></section>
 </section>
