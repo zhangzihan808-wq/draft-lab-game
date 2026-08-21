@@ -27,14 +27,18 @@
 @media(max-width:950px){.nav{display:none}.home-hero,.lesson-shell,.exam-intro{grid-template-columns:1fr}.feature-grid,.module-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.record-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.top{min-height:60px}.brand span:last-child{font-size:13px}.logo{width:33px;height:33px}.page{width:calc(100% - 20px);padding-top:32px}.home-copy{text-align:center}.home-copy .lead{margin-left:auto;margin-right:auto}.actions{justify-content:center}.feature-grid,.module-grid,.stats{grid-template-columns:1fr}.catalog-top{align-items:stretch;flex-direction:column}.lesson-copy,.sim-card,.quiz-card{padding:15px}.options{grid-template-columns:1fr}.diagram{height:220px}.result-grid{grid-template-columns:1fr}.loss-pill{font-size:10px;padding:7px}.loss-pill b{font-size:13px}.page-title{font-size:40px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+.module-return{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #5b7a45!important;border-radius:9px!important;background:#17291a!important;color:#b9f34a!important}.module-return:hover{background:#b9f34a!important;color:#142207!important}.back-material{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;align-items:center;gap:8px;padding:12px 15px;border:1px solid #5b7a45;border-radius:999px;background:#17291aee;color:#b9f34a;font-size:12px;font-weight:950;box-shadow:0 16px 35px #0008;backdrop-filter:blur(12px)}.back-material:hover{background:#b9f34a;color:#142207}@media(max-width:720px){.back-material{right:10px;bottom:10px}.nav .module-return{order:-1;width:100%;justify-content:center}}
+
 </style>
 </head>
 <body>
 <header class="top">
 <a class="brand" href="#home"><span class="logo">α</span><span>追觅个护模具实验室</span></a>
-<nav class="nav" aria-label="主导航"><a href="#home">首页</a><a href="#learn">知识学习</a><a href="#practice">互动练习</a><a href="#exam">模具科目一</a><a href="#record">学习记录</a><a href="#support">支持作者</a></nav>
+<nav class="nav" aria-label="主导航"><a class="module-return" href="index.html">← 粒子料实验室</a><a href="#home">首页</a><a href="#learn">知识学习</a><a href="#practice">互动练习</a><a href="#exam">模具科目一</a><a href="#record">学习记录</a><a href="#support">支持作者</a></nav>
 <div class="loss-pill">本次模拟损失 <b id="headerLoss">¥0</b></div>
 </header>
+<a class="back-material" href="index.html">← 返回粒子料实验室</a>
 <main>
 <section class="page" id="homePage">
 <div class="home-hero"><div class="home-copy"><p class="eyebrow">用图和游戏学懂注塑模具</p><h1 class="page-title">追觅个护<br>模具实验室</h1><p class="lead">先看简单示意图，再进入真实使用场景。通过点击、选择和模拟操作，理解模具为什么这样设计。</p><div class="actions"><a class="btn primary" href="#learn">开始学习 →</a><a class="btn yellow" href="#exam">直接模拟考试</a></div></div><aside class="hero-card"><p class="eyebrow">每个知识点都这样学</p><h2>看懂 → 操作 → 记住</h2><div class="flow"><div class="flow-step"><i>1</i><div><b>图解讲解</b><small>一张示意图，一句核心原理</small></div></div><div class="flow-step"><i>2</i><div><b>真实场景</b><small>模拟设计、开模和生产问题</small></div></div><div class="flow-step"><i>3</i><div><b>错误反馈</b><small>播放故障结果，模拟损失 +1元</small></div></div></div><div class="disclaimer">“模拟损失”只是帮助记忆的游戏数值，不是真实费用，也不需要支付。</div></aside></div>
