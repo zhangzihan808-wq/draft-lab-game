@@ -132,15 +132,15 @@
 .cmf-board.pass .visual-pass{display:block}
 .cmf-board.impact.fail .after .failure{background:repeating-linear-gradient(132deg,transparent 0 14px,#fff 15px 17px,transparent 18px 25px),radial-gradient(circle at 93% 22%,#f8f5ef 0 15%,#71665c55 16% 20%,transparent 21%),linear-gradient(95deg,transparent 62%,#ffffffc7 63% 72%,transparent 74%)}
 .cmf-board.impact.warn .after .failure{background:linear-gradient(125deg,transparent 0 47%,#ffffffd0 48% 55%,transparent 64%),radial-gradient(circle at 91% 20%,#fff9 0 8%,transparent 9%)}
-.cmf-board.heat.fail .after{filter:saturate(.62) brightness(.9)}
+.cmf-board.heat.fail .plaque.after{filter:saturate(.62) brightness(.9)}
 .cmf-board.heat.fail .after .failure{background:linear-gradient(90deg,#c49a4155,#7b4f1b9c);mix-blend-mode:multiply}
-.cmf-board.heat.warn .after{filter:saturate(.84)}
+.cmf-board.heat.warn .plaque.after{filter:saturate(.84)}
 .cmf-board.heat.warn .after .failure{background:linear-gradient(90deg,#d8b15c18,#c7903b66);mix-blend-mode:multiply}
 .cmf-board.load.fail .after .failure{background:repeating-linear-gradient(103deg,#fff0 0 5px,#fff9 6px 7px,#34271936 8px 10px,#fff0 11px 17px),linear-gradient(90deg,#ffffff1a 0 47%,#2c211c42 49% 55%,#ffffff78 57%)}
 .cmf-board.load.warn .after .failure{background:linear-gradient(100deg,transparent 0 29%,#ffffffc4 45%,#2b211d2b 54%,transparent 68%)}
 .cmf-board.wear.fail .after .failure{background:repeating-linear-gradient(112deg,transparent 0 10px,#fff 11px 13px,#4f463d70 14px 15px,transparent 16px 22px),radial-gradient(ellipse at 53% 52%,#ede7dcdd 0 25%,transparent 27%)}
 .cmf-board.wear.warn .after .failure{background:repeating-linear-gradient(112deg,transparent 0 21px,#ffffffc7 22px 24px,transparent 25px 34px),radial-gradient(ellipse at 52% 50%,#fff5 0 22%,transparent 28%)}
-.cmf-board.testing .after{animation:sampleScan .75s ease 2}
+.cmf-board.testing .plaque.after{animation:sampleScan .75s ease 2}
 .cmf-board.testing .sample-stage:after{content:"";position:absolute;left:53%;right:2%;top:14px;height:2px;background:var(--rose);box-shadow:0 0 18px var(--rose);animation:scan 1s linear 2}
 @keyframes sampleScan{50%{filter:brightness(.9)}}@keyframes scan{to{transform:translateY(130px)}}
 .focus-hint{position:absolute;left:14px;right:14px;bottom:11px;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#6f6963;font-size:12px}
@@ -181,6 +181,12 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 .visual-readout.warn .readout-cell{border-color:#e7d0b6;background:#fff9f1}.visual-readout.fail .readout-cell{border-color:#e6c1bc;background:#fff5f3}
 .photo-defect{display:none!important}.look-here,.visual-pass{display:none!important}
 @media(max-width:720px){.visual-readout{grid-template-columns:1fr}.readout-cell b{white-space:normal}}
+
+/* Experiment before/after use exactly the same specimen language */
+.plaque.after{outline:0!important;outline-offset:0!important}
+.effect-label,.look-here,.visual-pass,.simulation-badge{display:none!important}
+.cmf-board.pass .plaque.after{filter:none}
+.cmf-board.pass .plaque.after .failure{display:none!important}
 </style>
 </head>
 <body>
@@ -403,7 +409,7 @@ wear:{pass:{label:"外观保持",read:[["触感","保持"],["划痕","不明显"
 function effectLabel(state){return state&&EFFECT_RESULTS[currentTest][state]?EFFECT_RESULTS[currentTest][state].label:""}
 function readoutHTML(state){if(!state)return '<div class="visual-readout"><div class="readout-cell"><small>颜色</small><b>等待实验</b></div><div class="readout-cell"><small>光泽</small><b>等待实验</b></div><div class="readout-cell"><small>表面</small><b>等待实验</b></div></div>';const r=EFFECT_RESULTS[currentTest][state];return '<div class="visual-readout '+state+'">'+r.read.map(x=>'<div class="readout-cell"><small>'+x[0]+'</small><b>'+x[1]+'</b></div>').join("")+'</div>'}
 
-function sampleHTML(side,name,state){const d=M[name],p=parts[currentPart],t=tests[currentTest],klass=state||"",family=(name.includes("GF")?" gf":"")+(name==="PC"?" clear":"")+(name==="POM"?" satin":"");return '<div class="sample-title"><b>'+side+' · '+name+'</b><span>'+p.name+'</span></div><div class="cmf-board '+currentTest+' '+klass+'" style="--sample:'+d.color+'"><span class="test-stamp">'+t.name+'</span><div class="sample-stage"><div class="sample-column before"><span>实验前</span><div class="plaque'+family+'"></div></div><div class="change-arrow">→</div><div class="sample-column after"><span>实验后</span><div class="plaque after'+family+'"><i class="failure"></i><b class="effect-label '+klass+'">'+effectLabel(state)+'</b></div></div></div><div class="focus-hint"><b>只看三件事</b><span>'+focusHints[currentTest]+'</span></div></div>'+readoutHTML(state)+'<div class="outcome"><div class="outcome-head"><strong>'+(state?resultLabel(state):"等待同工况对比")+'</strong><span class="status '+(state||"")+'">'+(state?stateText(state):"—")+'</span></div><p>'+(state?observation(name,state):"左侧为原始样板，右侧为实验后样板。两种材料保持同色、同纹理、同涂层和同工况。")+'</p></div>'}
+function sampleHTML(side,name,state){const d=M[name],p=parts[currentPart],t=tests[currentTest],klass=state||"",family=(name.includes("GF")?" gf":"")+(name==="PC"?" clear":"")+(name==="POM"?" satin":"");return '<div class="sample-title"><b>'+side+' · '+name+'</b><span>'+p.name+'</span></div><div class="cmf-board '+currentTest+' '+klass+'" style="--sample:'+d.color+'"><span class="test-stamp">'+t.name+'</span><div class="sample-stage"><div class="sample-column before"><span>实验前</span><div class="plaque'+family+'"></div></div><div class="change-arrow">→</div><div class="sample-column after"><span>实验后</span><div class="plaque after'+family+'"><i class="failure"></i></div></div></div><div class="focus-hint"><b>只看三件事</b><span>'+focusHints[currentTest]+'</span></div></div>'+readoutHTML(state)+'<div class="outcome"><div class="outcome-head"><strong>'+(state?resultLabel(state):"等待同工况对比")+'</strong><span class="status '+(state||"")+'">'+(state?stateText(state):"—")+'</span></div><p>'+(state?observation(name,state):"左侧为原始样板，右侧为实验后样板。两种材料保持同色、同纹理、同涂层和同工况。")+'</p></div>'}
 function resultLabel(s){return s==="pass"?"实验前后差异小":s==="warn"?"已出现可见变化":"已出现明显失效"}
 function stateText(s){return s==="pass"?"可进入样板":s==="warn"?"需要专项验证":"先调整方案"}
 function stateFor(name){const score=CMF[name].scores[currentTest],sev=+el("severity").value,threshold=[0,30,42,54,66,78][sev],margin=score-threshold;return margin>=6?"pass":margin>=-12?"warn":"fail"}
