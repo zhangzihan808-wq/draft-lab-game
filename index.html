@@ -196,6 +196,81 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 .effect-label,.look-here,.visual-pass,.simulation-badge{display:none!important}
 .cmf-board.pass .plaque.after{filter:none}
 .cmf-board.pass .plaque.after .failure{display:none!important}
+
+/* CMF foundation labs */
+#basics{padding-top:108px}
+.foundation-intro{display:grid;grid-template-columns:minmax(0,.85fr) minmax(420px,1.15fr);gap:54px;align-items:end;margin-bottom:34px}
+.foundation-intro h2{margin:10px 0 0;font-size:clamp(48px,6.2vw,94px);line-height:.94;letter-spacing:-.07em}
+.foundation-intro p{margin:0;color:var(--muted);font-size:17px;line-height:1.85;max-width:720px}
+.foundation-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.foundation-lab{min-width:0;border:1px solid var(--line);border-radius:34px;background:#fffaf6;padding:28px;box-shadow:0 24px 70px #4a38230b}
+.foundation-lab-head{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;margin-bottom:22px}
+.foundation-lab-head small{display:block;color:var(--rose);font-size:12px;font-weight:800;letter-spacing:.17em;margin-bottom:8px}
+.foundation-lab-head h3{margin:0;font-size:clamp(27px,2.3vw,39px);letter-spacing:-.045em}
+.foundation-lab-head p{margin:7px 0 0;color:var(--muted);font-size:14px;line-height:1.65;max-width:460px}
+.appearance-stage,.coating-stage{position:relative;overflow:hidden;border-radius:25px;background:#f0ece6;border:1px solid #ddd5cb}
+.appearance-stage{min-height:300px;display:grid;place-items:center;padding:42px 30px 34px}
+.appearance-stage:before{content:"SAME COLOR · DIFFERENT REFLECTION";position:absolute;top:18px;left:20px;color:#8c867f;font-size:11px;letter-spacing:.15em}
+.appearance-sample{--lab-color:#bd5a51;--shine:.68;position:relative;width:min(76%,360px);aspect-ratio:1.5;border-radius:32px;background:var(--lab-color);box-shadow:0 28px 45px #46302325,inset 0 -18px 30px #2d17151b;overflow:hidden;transition:background .28s ease,filter .28s ease}
+.appearance-sample:before{content:"";position:absolute;inset:0;background:linear-gradient(116deg,transparent 8%,rgba(255,255,255,.72) 27%,rgba(255,255,255,.13) 43%,transparent 58%);opacity:var(--shine);transition:opacity .25s ease}
+.appearance-sample:after{content:"";position:absolute;inset:0;opacity:var(--texture-opacity,.04);mix-blend-mode:multiply;pointer-events:none}
+.appearance-sample.texture-fine:after{background:radial-gradient(circle at 1px 1px,#1e1715 1px,transparent 1.2px);background-size:5px 5px}
+.appearance-sample.texture-coarse:after{background:radial-gradient(ellipse at 25% 35%,#1e1715 0 1px,transparent 2.8px),radial-gradient(ellipse at 70% 65%,#fff 0 1px,transparent 3px);background-size:12px 10px,15px 13px}
+.appearance-stage-label{position:absolute;left:20px;bottom:16px;right:20px;display:flex;justify-content:space-between;color:#6c6761;font-size:12px}
+.foundation-controls{display:grid;gap:14px;margin-top:18px}
+.foundation-control{display:grid;grid-template-columns:92px 1fr;gap:13px;align-items:center}
+.foundation-control>span{font-size:13px;color:var(--muted)}
+.foundation-choice{display:flex;gap:8px;flex-wrap:wrap}
+.foundation-choice button{min-height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:#fffdfa;color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
+.foundation-choice button.active{background:var(--black);border-color:var(--black);color:#fff}
+.foundation-color button{width:38px;padding:0;border-radius:50%;background:var(--choice);box-shadow:inset 0 0 0 3px #fff}
+.foundation-color button.active{outline:3px solid var(--rose);outline-offset:2px;border-color:transparent}
+.foundation-range{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.foundation-range input{width:100%;accent-color:var(--rose)}
+.foundation-range output{min-width:62px;text-align:right;font-size:13px;font-weight:700}
+.appearance-triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}
+.appearance-chip{--lab-color:#bd5a51;position:relative;overflow:hidden;height:86px;border-radius:17px;background:var(--lab-color);box-shadow:inset 0 -10px 18px #2b181518}
+.appearance-chip:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 10%,rgba(255,255,255,.7) 34%,transparent 58%);opacity:var(--chip-shine)}
+.appearance-chip:after{content:attr(data-label);position:absolute;left:10px;bottom:8px;padding:3px 7px;border-radius:999px;background:#fffdfad9;color:#3c3732;font-size:11px;font-weight:700}
+.appearance-chip.high{--chip-shine:.85}.appearance-chip.satin{--chip-shine:.38}.appearance-chip.matte{--chip-shine:.08;filter:saturate(.9) brightness(1.08)}
+.foundation-result{margin-top:17px;border-top:1px solid var(--line);padding-top:17px}
+.foundation-result small{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+.foundation-result b{display:block;font-size:19px;line-height:1.45}
+.foundation-result p{margin:7px 0 0;color:var(--muted);font-size:14px;line-height:1.7}
+.failure-choice{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin-bottom:16px}
+.failure-choice button{min-height:52px;padding:7px;border:1px solid var(--line);border-radius:14px;background:#fffdfa;color:var(--ink);font:inherit;font-size:12px;line-height:1.3;cursor:pointer}
+.failure-choice button.active{background:var(--black);border-color:var(--black);color:#fff}
+.coating-stage{min-height:300px;padding:28px 26px 24px;display:grid;align-content:center}
+.coating-stage:before{content:"COATING CROSS-SECTION";position:absolute;top:15px;left:19px;color:#8c867f;font-size:11px;letter-spacing:.15em}
+.coat-stack{position:relative;margin-top:22px;height:174px;border-radius:18px;overflow:hidden;background:#e3dbd2;box-shadow:0 18px 35px #3d30231a}
+.coat-layer{position:absolute;left:0;right:0;display:flex;align-items:center;padding-left:16px;font-size:11px;font-weight:700;color:#4a433d;transition:transform .3s ease,filter .3s ease}
+.coat-top{top:0;height:25px;background:linear-gradient(90deg,#fffaf1,#e7ddd2)}
+.coat-color{top:25px;height:34px;background:linear-gradient(90deg,#bf6159,#9f4039);color:#fff}
+.coat-primer{top:59px;height:24px;background:#c8b9a8}
+.coat-base{top:83px;bottom:0;background:linear-gradient(120deg,#b6b0ab,#d0cbc5 45%,#aaa39d)}
+.coat-defect{position:absolute;display:none;z-index:5;pointer-events:none}
+.defect-crack{top:29px;bottom:0;left:56%;width:4px;background:#4d1f1b;transform:skew(-12deg);box-shadow:-11px 34px 0 -1px #4d1f1b,9px 75px 0 -1px #4d1f1b}
+.defect-film{top:0;height:62px;left:59%;width:3px;background:#fff;transform:skew(13deg);box-shadow:-9px 18px 0 -1px #fff}
+.defect-peel{display:none;right:0;top:0;width:43%;height:83px;background:linear-gradient(#f6eee5 0 30%,#b95149 31% 70%,#c8b9a8 71%);clip-path:polygon(12% 0,100% 0,100% 100%,0 70%);transform-origin:right top;transform:rotate(-10deg);filter:drop-shadow(-7px 8px 8px #39241f33)}
+.defect-wrinkle{top:0;left:0;right:0;height:60px;background:repeating-radial-gradient(ellipse at 20% 0,#fff8 0 3px,#8c3c3633 6px 12px);mix-blend-mode:overlay}
+.coating-stage.state-substrate .defect-crack,.coating-stage.state-film .defect-film,.coating-stage.state-peel .defect-peel,.coating-stage.state-bite .defect-wrinkle{display:block}
+.coating-stage.state-peel .coat-top,.coating-stage.state-peel .coat-color,.coating-stage.state-peel .coat-primer{transform:translateX(-3%)}
+.coating-stage.state-bite .coat-top,.coating-stage.state-bite .coat-color{filter:saturate(.55) brightness(.9)}
+.failure-result{margin-top:16px;border-top:1px solid var(--line);padding-top:16px}
+.failure-result-head{display:flex;justify-content:space-between;gap:14px;align-items:center}
+.failure-result-head small{color:var(--muted);font-size:12px}
+.failure-result-head b{font-size:20px;color:var(--rose)}
+.failure-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:13px}
+.failure-fact{padding:13px 14px;background:#f1ece6;border-radius:15px}
+.failure-fact span{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}
+.failure-fact b{font-size:13px;line-height:1.55}
+.foundation-principle{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;padding:22px 26px;border-left:3px solid var(--rose);background:#eee7df}
+.foundation-principle b{font-size:16px}.foundation-principle p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+.foundation-sources{margin-top:15px;color:var(--muted);font-size:12px;line-height:1.7}
+.foundation-sources a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1050px){.foundation-intro{grid-template-columns:1fr;gap:20px}.foundation-grid{grid-template-columns:1fr}.failure-choice{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:680px){#basics{padding-top:78px}.foundation-lab{padding:18px;border-radius:24px}.foundation-lab-head{display:block}.foundation-control{grid-template-columns:1fr}.failure-choice{grid-template-columns:1fr 1fr}.failure-choice button:first-child{grid-column:1/-1}.appearance-stage,.coating-stage{min-height:250px}.appearance-sample{width:88%}.foundation-principle,.failure-facts{grid-template-columns:1fr}.foundation-intro h2{font-size:52px}}
+
 </style>
 </head>
 <body>
@@ -211,7 +286,7 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 <h1><span>从材料开始，</span><em>把 CMF 做对。</em></h1>
 <p>面向个护产品 CMF 设计师的材料决策工具。先看 8 种常用工程塑料的本体外观与表面工艺适配，再识别色差、浮纤、应力开裂、起皮和老化风险，最后用同工况 A/B 风险预演辅助判断。</p>
 <div class="hero-points"><span>8 种常用材料</span><span>4 类 CMF 风险</span><span>同工况 A/B 对比</span></div>
-<div class="hero-actions"><a class="primary" href="#theory">先了解材料</a><a class="secondary" href="#practice">直接对比验证</a></div>
+<div class="hero-actions"><a class="primary" href="#basics">先看懂 CMF</a><a class="secondary" href="#practice">直接对比验证</a></div>
 </div>
 <div class="hero-board" aria-label="八种个护常用材料快速入口">
 <div class="hero-panel-head"><div><small>CMF MATERIAL DECISION</small><b>选择材料，看它会带来什么结果</b></div><span>08</span></div>
@@ -230,9 +305,69 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 <div><small>02 · FINISH</small><b>再看表面适配</b><span>喷涂、电镀、印刷与粘接</span></div>
 <div><small>03 · VALIDATE</small><b>最后验证风险</b><span>外观缺陷、耐久与老化趋势</span></div>
 </div>
-<div class="hero-board-foot"><b>同一部件 · 同一表面体系</b><span>只改变材料，差异才有意义</span></div>
+<div class="hero-board-foot"><b>同一部件 · 同一 CMF 目标</b><span>工艺按基材适配，再比较材料差异</span></div>
 </div>
 </section>
+
+
+<section class="chapter" id="basics"><div class="wrap">
+<div class="foundation-intro"><div><span class="eyebrow">00 · CMF FOUNDATION LAB</span><h2>先看懂外观，<br>再认识材料。</h2></div><p>颜色、纹理和光泽不是三个互不相关的选项；喷涂“开裂”也不是一种缺陷。先用两组可操作的基础实验看懂光如何改变颜色，以及基材、底涂和面漆究竟在哪一层失效。</p></div>
+<div class="foundation-grid">
+<article class="foundation-lab" aria-labelledby="appearanceLabTitle">
+<div class="foundation-lab-head"><div><small>01 · APPEARANCE</small><h3 id="appearanceLabTitle">同一个颜色，为什么看起来不同？</h3><p>保持色值不变，只改变表面微结构与镜面反射。</p></div></div>
+<div class="appearance-stage">
+<div class="appearance-sample texture-smooth" id="appearanceSample" role="img" aria-label="当前颜色、纹理和光泽组合的CMF样板"></div>
+<div class="appearance-stage-label"><span id="appearanceTextureLabel">光面</span><span id="appearanceGlossLabel">高光 · 80 GU趋势</span></div>
+</div>
+<div class="foundation-controls">
+<div class="foundation-control"><span>颜色</span><div class="foundation-choice foundation-color" aria-label="选择样板颜色">
+<button type="button" class="active" data-foundation-color="#bd5a51" style="--choice:#bd5a51" aria-label="珊瑚红" aria-pressed="true"></button>
+<button type="button" data-foundation-color="#d8c9b9" style="--choice:#d8c9b9" aria-label="暖米白" aria-pressed="false"></button>
+<button type="button" data-foundation-color="#6d7f8c" style="--choice:#6d7f8c" aria-label="雾霾蓝" aria-pressed="false"></button>
+<button type="button" data-foundation-color="#2f302f" style="--choice:#2f302f" aria-label="石墨黑" aria-pressed="false"></button>
+</div></div>
+<div class="foundation-control"><span>纹理</span><div class="foundation-choice" aria-label="选择表面纹理">
+<button type="button" class="active" data-foundation-texture="smooth">光面</button>
+<button type="button" data-foundation-texture="fine">细纹</button>
+<button type="button" data-foundation-texture="coarse">粗纹</button>
+</div></div>
+<div class="foundation-control"><span>光泽</span><div class="foundation-range"><input id="foundationGloss" type="range" min="5" max="90" value="80" step="5" aria-label="样板光泽趋势"><output id="foundationGlossValue">80 GU趋势</output></div></div>
+</div>
+<div class="appearance-triptych" aria-label="相同颜色的高光半哑光和哑光对照">
+<div class="appearance-chip high" data-label="高光"></div><div class="appearance-chip satin" data-label="半哑光"></div><div class="appearance-chip matte" data-label="哑光"></div>
+</div>
+<div class="foundation-result" aria-live="polite"><small>你现在看到</small><b id="appearanceConclusion">同一珊瑚红，高光让颜色显得更深、更饱和，倒影和缺陷也更明显。</b><p id="appearanceRisk">高光平面会放大流痕、缩水、焊线与划伤。</p></div>
+</article>
+
+<article class="foundation-lab" aria-labelledby="coatingLabTitle">
+<div class="foundation-lab-head"><div><small>02 · COATING FAILURE</small><h3 id="coatingLabTitle">喷涂为什么会裂、起皮或起皱？</h3><p>选择一种工况，看清楚究竟是哪一层失效。</p></div></div>
+<div class="failure-choice" id="failureChoice" aria-label="选择喷涂失效场景">
+<button type="button" class="active" data-failure="normal">正常匹配</button>
+<button type="button" data-failure="substrate">应力＋溶剂</button>
+<button type="button" data-failure="film">形变＋热循环</button>
+<button type="button" data-failure="peel">附着不足</button>
+<button type="button" data-failure="bite">层间溶剂不容</button>
+</div>
+<div class="coating-stage state-normal" id="coatingStage" role="img" aria-label="塑料基材与喷涂层的截面失效示意">
+<div class="coat-stack">
+<div class="coat-layer coat-top">保护面漆</div><div class="coat-layer coat-color">色漆</div><div class="coat-layer coat-primer">底涂 / 前处理界面</div><div class="coat-layer coat-base">塑料基材</div>
+<i class="coat-defect defect-crack"></i><i class="coat-defect defect-film"></i><i class="coat-defect defect-peel"></i><i class="coat-defect defect-wrinkle"></i>
+</div>
+</div>
+<div class="failure-result" id="failureResult" aria-live="polite">
+<div class="failure-result-head"><small>当前结果</small><b id="failureName">正常保持</b></div>
+<div class="failure-facts">
+<div class="failure-fact"><span>坏在哪一层</span><b id="failureLayer">基材和各涂层均保持完整</b></div>
+<div class="failure-fact"><span>为什么发生</span><b id="failureCause">材料、前处理、涂层柔韧性和固化窗口相互匹配</b></div>
+<div class="failure-fact"><span>肉眼看见什么</span><b id="failureVisible">颜色、光泽、边缘和层间附着保持稳定</b></div>
+<div class="failure-fact"><span>下一步确认</span><b id="failureAction">进入百格、冷热冲击、介质和实际装配样板验证</b></div>
+</div>
+</div>
+</article>
+</div>
+<div class="foundation-principle"><div><b>颜色不是单独存在的。</b><p>相同色值遇到不同纹理、光泽、膜厚和观察角度，会形成不同的视觉颜色。</p></div><div><b>“喷涂开裂”必须先分层。</b><p>先判断是塑料基材裂、涂膜裂、界面起皮，还是上层溶剂造成咬底，再决定找材料、注塑、结构或涂装团队。</p></div></div>
+<p class="foundation-sources">原理参考：<a href="https://www.byk-instruments.com/support/knowledge/white-papers/appearance/gloss-measurement" target="_blank" rel="noreferrer">BYK 光泽与表面外观</a>、<a href="https://www.xrite.com/zh-cn/blog/visualizing-surface-texture" target="_blank" rel="noreferrer">X-Rite 颜色/纹理/光泽关系</a>、<a href="https://solutions.covestro.com/-/media/covestro/solution-center/story/brochures/wp_makrolon---the-chemical-resistance.pdf" target="_blank" rel="noreferrer">Covestro PC 化学介质与应力开裂</a>。示意用于理解失效机理，不替代真实材料与涂层验证。</p>
+</div></section>
 
 <section class="chapter" id="theory"><div class="wrap">
 <div class="section-head"><div><span class="eyebrow">01 · MATERIAL KNOWLEDGE</span><h2>用 CMF 的方式<br>理解材料。</h2></div><p>只保留 CMF 设计决策需要的内容：本体外观、色彩自由度、纹理与光泽、二次工艺、可见缺陷、使用老化和验证方法。结构参数仅在会影响外观与耐久时出现。</p></div>
@@ -391,7 +526,7 @@ wear:[
 ]
 };
 const testActions={
-impact:{pass:"锁定同一底涂/面漆体系制作色板并做百格、冷热冲击。",warn:"安排前处理、底涂、溶剂和固化温度 DOE。",fail:"不要直接套用现有涂层；先换低攻击性体系、增加前处理或更换装饰策略。"},
+impact:{pass:"分别锁定适配基材的底涂/面漆体系，再以同一颜色和光泽目标制作色板并做百格、冷热冲击。",warn:"安排前处理、底涂、溶剂和固化温度 DOE。",fail:"不要直接套用现有涂层；先换低攻击性体系、增加前处理或更换装饰策略。"},
 heat:{pass:"进入色差、光泽和光热老化样板验证。",warn:"增加 UV/热循环对照，并锁定颜色体系和稳定方案。",fail:"优先调整材料族、颜色或隔热设计，再做复合老化。"},
 load:{pass:"制作同纹理、同模温的纹理板，确认光泽上下限。",warn:"联动浇口、模温、纹理深度和喷涂遮蔽做 DOE。",fail:"A级面不建议直接裸露；考虑覆件、喷涂遮盖或换低浮纤材料。"},
 wear:{pass:"进入真实手汗、清洁剂和往复摩擦验证。",warn:"需要 hard-coat、涂层或纹理补偿并做耐磨 DOE。",fail:"裸材/现有涂层风险高；优先更换表面体系或材料方案。"}
@@ -501,8 +636,46 @@ function closeGlossary(){el("glossaryModal").hidden=true;document.body.style.ove
 function linkTerms(root){if(!root)return;const terms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length),rx=new RegExp("("+terms.join("|")+")","g"),walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode()){const n=walker.currentNode,p=n.parentElement;if(n.nodeValue.trim()&&!p.closest(".term,script,style,select,option,button,summary")&&rx.test(n.nodeValue)){nodes.push(n);rx.lastIndex=0}}nodes.forEach(n=>{const frag=document.createDocumentFragment();n.nodeValue.split(rx).forEach(part=>{if(GLOSSARY[part]){const b=document.createElement("button");b.type="button";b.className="term";b.dataset.term=part;b.textContent=part;frag.appendChild(b)}else frag.appendChild(document.createTextNode(part))});n.replaceWith(frag)})}
 document.addEventListener("click",e=>{const t=e.target.closest(".term");if(t)openGlossary(t.dataset.term);if(e.target===el("glossaryModal")||e.target===el("glossaryClose"))closeGlossary()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!el("glossaryModal").hidden)closeGlossary()});
 function renderProductCase(name){const c=PRODUCT_CASE[name],real=c.type==="real";el("caseMaterial").textContent=name;el("caseSubtitle").textContent=real?"已上市整机中的确认材料大类":"当前整机未确认 · 以下为行业典型应用";el("caseStatus").textContent=real?"真实产品材料案例":"行业典型应用";el("caseStatus").className="case-status "+(real?"real":"typical");el("casePartList").innerHTML=c.parts.map(x=>"<span>"+x+"</span>").join("");el("caseWhy").textContent=c.why;el("caseFinish").textContent=c.finish;el("caseRisk").textContent=c.risk;el("caseBoundary").innerHTML=real?"<b>信息边界：</b>仅展示材料大类与部件关系；具体牌号、供应商、配方及内部零件编号不公开。":"<b>信息边界：</b>这是行业典型位置，不代表图示产品实际采用了 "+name+"。";el("caseHotspots").innerHTML=c.zones.map(z=>'<i class="case-zone '+(z[5]||"")+'" style="left:'+z[1]+'%;top:'+z[2]+'%;width:'+z[3]+'%;height:'+z[4]+'%" aria-label="'+z[0]+'"><span>'+z[0]+'</span></i>').join("")}
+
+function initFoundationLabs(){
+ const root=el("basics");if(!root)return;
+ const sample=el("appearanceSample"),gloss=el("foundationGloss"),glossOut=el("foundationGlossValue");
+ let color="#bd5a51",colorName="珊瑚红",texture="smooth";
+ const textureNames={smooth:"光面",fine:"细纹",coarse:"粗纹"};
+ const textureRisk={smooth:"光面会直接暴露流痕、缩水、焊线和划伤。",fine:"细纹能柔化倒影，但纹理复制和局部光泽差仍会形成阴阳面。",coarse:"粗纹会产生更强阴影；喷涂时还要关注纹理顶部露底和沟槽积漆。"};
+ function updateAppearance(){
+  const g=+gloss.value,shine=Math.max(.04,Math.min(.88,g/100));
+  sample.style.setProperty("--lab-color",color);sample.style.setProperty("--shine",shine);sample.style.setProperty("--texture-opacity",texture==="smooth"?".02":texture==="fine"?".10":".17");
+  sample.className="appearance-sample texture-"+texture;
+  document.querySelectorAll(".appearance-chip").forEach(x=>x.style.setProperty("--lab-color",color));
+  glossOut.value=g+" GU趋势";el("appearanceTextureLabel").textContent=textureNames[texture];
+  el("appearanceGlossLabel").textContent=(g>=70?"高光":g>=30?"半哑光":"哑光")+" · "+g+" GU趋势";
+  const glossText=g>=70?"高光让颜色显得更深、更饱和，倒影和缺陷也更明显":g>=30?"半哑光在颜色深度、柔和反射和耐指纹之间折中":"低光泽打散镜面反射，颜色通常显得更浅、更灰、更柔和";
+  el("appearanceConclusion").textContent="同一"+colorName+"，"+glossText+"。";
+  el("appearanceRisk").textContent=textureRisk[texture];
+ }
+ document.querySelectorAll("[data-foundation-color]").forEach(b=>b.addEventListener("click",()=>{
+  color=b.dataset.foundationColor;colorName=b.getAttribute("aria-label");document.querySelectorAll("[data-foundation-color]").forEach(x=>{const on=x===b;x.classList.toggle("active",on);x.setAttribute("aria-pressed",on)});updateAppearance()
+ }));
+ document.querySelectorAll("[data-foundation-texture]").forEach(b=>b.addEventListener("click",()=>{texture=b.dataset.foundationTexture;document.querySelectorAll("[data-foundation-texture]").forEach(x=>x.classList.toggle("active",x===b));updateAppearance()}));
+ gloss.addEventListener("input",updateAppearance);updateAppearance();
+ const failures={
+  normal:{name:"正常保持",layer:"基材和各涂层均保持完整",cause:"材料、前处理、涂层柔韧性和固化窗口相互匹配",visible:"颜色、光泽、边缘和层间附着保持稳定",action:"进入百格、冷热冲击、介质和实际装配样板验证"},
+  substrate:{name:"基材应力开裂",layer:"裂纹从塑料基材内部或表层开始，不只是油漆裂",cause:"注塑残余应力或装配应力叠加涂料溶剂，基材通过裂纹释放被锁住的势能",visible:"细密发白、龟裂或延迟裂纹；透明件可能先出现雾化",action:"检查偏光应力、圆角/螺丝柱、模温保压，并做装配定载＋真实溶剂组合验证"},
+  film:{name:"涂膜自身开裂",layer:"保护面漆、色漆或底涂开裂，塑料基材可能仍完整",cause:"膜厚或固化收缩过大，涂层柔韧性跟不上部件形变与冷热循环",visible:"表面出现线状、网状裂纹，弯折边缘和转轴位置更明显",action:"核对膜厚、层间柔韧性、固化温度，并做弯折/热循环后的显微观察"},
+  peel:{name:"界面起皮 / 脱层",layer:"涂层从基材—底涂或底涂—色漆界面分离",cause:"油污/脱模剂、低表面能、前处理不足或超过重涂窗口导致附着不足",visible:"边缘翘起，胶带或划格后可整片揭起，基材本身不一定开裂",action:"检查清洁、表面能、活化与底涂；完成百格、剥离、湿热和冷热冲击"},
+  bite:{name:"咬底 / 起皱",layer:"上层溶剂重新软化或溶解尚未稳定的下层涂膜",cause:"底漆闪干不足、层间化学体系不相容或面漆溶剂攻击性过强",visible:"起皱、返黏、失光、局部隆起或底色被重新带起",action:"调整层间相容、溶剂攻击性、闪干与固化窗口，制作完整叠层样板"}
+ };
+ function setFailure(key){
+  const d=failures[key];el("coatingStage").className="coating-stage state-"+key;
+  el("failureName").textContent=d.name;el("failureLayer").textContent=d.layer;el("failureCause").textContent=d.cause;el("failureVisible").textContent=d.visible;el("failureAction").textContent=d.action;
+  document.querySelectorAll("[data-failure]").forEach(b=>{const on=b.dataset.failure===key;b.classList.toggle("active",on);b.setAttribute("aria-pressed",on)})
+ }
+ document.querySelectorAll("[data-failure]").forEach(b=>b.addEventListener("click",()=>setFailure(b.dataset.failure)));setFailure("normal");linkTerms(root)
+}
+
 function renderTheory(name){currentMat=name;const d=M[name];document.querySelectorAll(".mat-tab").forEach(x=>x.classList.toggle("active",x.dataset.mat===name));el("pelletWindow").style.backgroundPosition=d.pos;el("specimenName").textContent=name+" · 典型粒子参考";el("matName").textContent=name;el("matTag").textContent=d.tag;el("matDesc").textContent=d.desc.split("。")[0]+"。";el("quickUse").textContent=d.apps[0][1];el("quickFinish").textContent=CMF[name].strategy;el("quickRisk").textContent=CMF[name].keyrisk;el("metrics").innerHTML=[["相对材料成本",d.price,"普通 ABS=1.0｜特殊体系价格可能重叠"],["典型密度",d.density+" g/cm³","材料族常见范围｜影响重量与手感"],["典型注塑熔体温度",d.melt,"常见加工范围｜不是量产设定值"],["本体色与外观潜力",CMF[name].look,"颜色受配方、色母与再生比例影响"],["二次工艺适配",CMF[name].strategy,"喷涂/电镀/印刷需分别验证"],["首要 CMF 风险",CMF[name].keyrisk,"材料族预判｜进入样板验证矩阵"]].map(x=>'<div class="metric"><span>'+x[0]+'</span><b>'+x[1]+'</b><em>'+x[2]+'</em></div>').join("");el("priceWhy").textContent=d.why;el("applications").innerHTML=facts(d.apps);el("processFacts").innerHTML=facts(d.process);el("finishFacts").innerHTML=facts(d.finish);el("riskGrid").innerHTML=d.risks.map((x,i)=>'<div class="risk"><i>0'+(i+1)+'</i><b>'+x[0]+'</b><p>'+x[1]+'</p></div>').join("");el("verifyList").innerHTML='<span>建议验证</span>'+d.verify.map(x=>'<span>'+x+'</span>').join("");const c=COST[name];el("costTitle").textContent="为什么 "+name+" 的相对价格约为 "+d.price+"？";el("costSummary").textContent=d.why;el("costSupply").textContent=c.supply;el("costProcess").textContent=c.process;el("costYield").textContent=c.yield;el("costCmf").textContent=c.cmf;renderProductCase(name);linkTerms(el("theory"))}
-el("materialTabs").innerHTML=order.map((n,i)=>'<button class="mat-tab" data-mat="'+n+'"><span><small>0'+(i+1)+'</small><b>'+n+'</b></span></button>').join("");document.querySelectorAll(".mat-tab").forEach(b=>b.onclick=()=>renderTheory(b.dataset.mat));renderTheory("ABS");document.querySelectorAll(".knowledge-drawer").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)document.querySelectorAll(".knowledge-drawer").forEach(other=>{if(other!==d)other.open=false})}));document.querySelectorAll(".hero-material").forEach(b=>b.onclick=()=>{renderTheory(b.dataset.heroMat);document.getElementById("theory").scrollIntoView({behavior:"smooth",block:"start"})});
+initFoundationLabs();el("materialTabs").innerHTML=order.map((n,i)=>'<button class="mat-tab" data-mat="'+n+'"><span><small>0'+(i+1)+'</small><b>'+n+'</b></span></button>').join("");document.querySelectorAll(".mat-tab").forEach(b=>b.onclick=()=>renderTheory(b.dataset.mat));renderTheory("ABS");document.querySelectorAll(".knowledge-drawer").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)document.querySelectorAll(".knowledge-drawer").forEach(other=>{if(other!==d)other.open=false})}));document.querySelectorAll(".hero-material").forEach(b=>b.onclick=()=>{renderTheory(b.dataset.heroMat);document.getElementById("theory").scrollIntoView({behavior:"smooth",block:"start"})});
 el("partList").innerHTML=Object.keys(parts).map((k,i)=>'<button class="part-btn'+(k===currentPart?' active':'')+'" data-part="'+k+'"><b>0'+(i+1)+' · '+parts[k].name+'</b><span>'+parts[k].note+'</span></button>').join("");
 function fillSelects(){for(const id of ["matA","matB"]){el(id).innerHTML=order.map(n=>'<option value="'+n+'">'+n+'</option>').join("")}}
 fillSelects();
