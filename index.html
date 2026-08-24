@@ -272,11 +272,18 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 @media(max-width:680px){#basics{padding-top:78px}.foundation-lab{padding:18px;border-radius:24px}.foundation-lab-head{display:block}.foundation-control{grid-template-columns:1fr}.failure-choice{grid-template-columns:1fr 1fr}.failure-choice button:first-child{grid-column:1/-1}.appearance-stage,.coating-stage{min-height:250px}.appearance-sample{width:88%}.foundation-principle,.failure-facts{grid-template-columns:1fr}.foundation-intro h2{font-size:52px}}
 
 
-/* Coating failure lab v2 */
+/* Coating failure lab v3 · material-linked */
+.coating-material-control{display:grid;grid-template-columns:165px 1fr;gap:10px;margin-bottom:14px;padding:12px;border-radius:18px;background:#191817;color:#fff}
+.coating-material-control label{display:flex;flex-direction:column;gap:7px}.coating-material-control label span{color:#bdb7b0;font-size:10px;font-weight:800;letter-spacing:.1em}
+.coating-material-control select{width:100%;height:43px;padding:0 34px 0 12px;border:0;border-radius:12px;background:#fffdfa;color:#191817;font:inherit;font-size:14px;font-weight:800}
+.coating-material-readout{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;min-width:0}
+.coating-material-readout>span{padding:7px 9px;border-radius:999px;background:#b95149;color:#fff7f4;font-size:10px;font-weight:800;white-space:nowrap}
+.coating-material-readout b{display:block;font-size:14px;line-height:1.35}.coating-material-readout p{margin:4px 0 0;color:#c8c2bc;font-size:11px;line-height:1.5}
+.failure-step-label{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:0 2px 8px}.failure-step-label span{color:var(--rose);font-size:10px;font-weight:800;letter-spacing:.1em}.failure-step-label b{color:var(--muted);font-size:10px}
 .failure-choice{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
 .failure-choice button{min-height:62px;padding:10px 8px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left}
 .failure-choice button b{font-size:14px;line-height:1.25}.failure-choice button span{margin-top:4px;color:var(--muted);font-size:11px;line-height:1.25}
-.failure-choice button.active span{color:#d7d1ca}
+.failure-choice button{position:relative}.failure-choice button.active span{color:#d7d1ca}.failure-choice button.recommended:not(.active){border-color:#b95149;box-shadow:inset 0 0 0 1px #b95149}.failure-choice button.recommended:after{content:"首查";position:absolute;top:6px;right:7px;padding:2px 5px;border-radius:999px;background:#f5dfdb;color:#a23f38;font-size:9px;font-weight:800}.failure-choice button.recommended.active:after{background:#b95149;color:#fff}
 .coating-visual-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:12px}
 .surface-view,.cross-section-view{min-width:0;padding:14px;border:1px solid var(--line);border-radius:23px;background:#f0ece6}
 .visual-panel-label{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:0 2px 12px}
@@ -320,8 +327,8 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 .failure-story b{font-size:13px;line-height:1.55}
 .failure-next{display:grid;grid-template-columns:115px 1fr;gap:12px;align-items:start;margin-top:10px;padding:14px 15px;border-radius:16px;background:#181716;color:#fff}
 .failure-next span{color:#bdb7b0;margin:1px 0 0}.failure-next b{font-size:13px;line-height:1.55}
-@media(max-width:1180px){.failure-choice{grid-template-columns:repeat(3,1fr)}.coating-visual-grid{grid-template-columns:1fr}.coating-surface{height:230px}}
-@media(max-width:820px){.failure-choice{grid-template-columns:1fr 1fr}.failure-choice button:first-child{grid-column:1/-1}.failure-choice button{min-height:58px}.failure-story{grid-template-columns:1fr}.failure-next{grid-template-columns:1fr}.coating-surface{height:220px}}
+@media(max-width:1180px){.failure-choice{grid-template-columns:repeat(3,1fr)}.coating-visual-grid{grid-template-columns:1fr}.coating-surface{height:230px}.coating-material-control{grid-template-columns:145px 1fr}}
+@media(max-width:820px){.coating-material-control{grid-template-columns:1fr}.coating-material-readout{grid-template-columns:1fr}.coating-material-readout>span{justify-self:start}.failure-step-label{display:block}.failure-step-label b{display:block;margin-top:4px}.failure-choice{grid-template-columns:1fr 1fr}.failure-choice button:first-child{grid-column:1/-1}.failure-choice button{min-height:58px}.failure-story{grid-template-columns:1fr}.failure-next{grid-template-columns:1fr}.coating-surface{height:220px}}
 @media(max-width:430px){.coating-visual-grid{gap:9px}.surface-view,.cross-section-view{padding:11px;border-radius:19px}.visual-panel-label{display:block}.visual-panel-label b{display:block;margin-top:4px}.failure-result-v2 .failure-result-head>span{display:none}}
 
 </style>
@@ -393,7 +400,14 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 </article>
 
 <article class="foundation-lab" aria-labelledby="coatingLabTitle">
-<div class="foundation-lab-head"><div><small>02 · COATING FAILURE</small><h3 id="coatingLabTitle">喷涂为什么会裂、起皮或起皱？</h3><p>选择一种工况，看清楚究竟是哪一层失效。</p></div></div>
+<div class="foundation-lab-head"><div><small>02 · COATING FAILURE</small><h3 id="coatingLabTitle">同一套喷涂，换一种基材会怎样？</h3><p>先选塑料基材，再切换失效工况；表面现象、失效层和验证重点会一起改变。</p></div></div>
+<div class="coating-material-control">
+<label for="failureMaterial"><span>01 · 塑料基材</span><select id="failureMaterial">
+<option>ABS</option><option>PC/ABS</option><option>PC</option><option>POM</option><option>PA66 GF30</option><option>PET GF30</option><option>PPA GF</option><option>PPS GF</option>
+</select></label>
+<div class="coating-material-readout" aria-live="polite"><span id="failureRoute">常规可喷涂</span><div><b id="failureMaterialFocus">ABS · 优先排查界面附着</b><p id="failureMaterialSummary">外观与喷涂适配通常较好；先排清洁、脱模剂与真实涂料体系的影响。</p></div></div>
+</div>
+<div class="failure-step-label"><span>02 · 选择失效工况</span><b>“首查”表示当前材料应优先排查的机制</b></div>
 <div class="failure-choice" id="failureChoice" aria-label="选择喷涂失效场景">
 <button type="button" class="active" data-failure="normal"><b>正常样板</b><span>层间匹配</span></button>
 <button type="button" data-failure="substrate"><b>基材裂</b><span>应力＋溶剂</span></button>
@@ -403,7 +417,7 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 </div>
 <div class="coating-visual-grid">
 <div class="surface-view">
-<div class="visual-panel-label"><span>01 · 表面观察</span><b>成品外观会出现什么</b></div>
+<div class="visual-panel-label"><span>A · 表面观察</span><b>成品外观会出现什么</b></div>
 <div class="coating-surface state-normal" id="coatingSurface" role="img" aria-label="喷涂件表面缺陷示意" data-status="正常保持">
 <div class="surface-highlight"></div>
 <svg class="surface-defect-art surface-substrate-art" viewBox="0 0 420 240" aria-hidden="true"><path d="M228 22l-18 45 22 25-36 37 16 28-31 56"/><path d="M211 67l-48 18-28 36"/><path d="M231 93l52 18 31 42"/><path d="M197 129l-42 35-9 37"/><path d="M212 157l51 20 28 36"/></svg>
@@ -414,7 +428,7 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 <div class="surface-legend"><span>同一块喷涂样板</span><b>先看裂纹形态、边缘和光泽变化</b></div>
 </div>
 <div class="cross-section-view">
-<div class="visual-panel-label"><span>02 · 失效剖面</span><b>确认究竟坏在哪一层</b></div>
+<div class="visual-panel-label"><span>B · 失效剖面</span><b>确认究竟坏在哪一层</b></div>
 <div class="coating-stage state-normal" id="coatingStage" role="img" aria-label="塑料基材与喷涂层的截面失效示意">
 <div class="coat-stack">
 <div class="coat-layer coat-top">保护面漆</div><div class="coat-layer coat-color">色漆</div><div class="coat-layer coat-primer">底涂 / 前处理界面</div><div class="coat-layer coat-base">塑料基材</div>
@@ -425,7 +439,7 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 </div>
 </div>
 <div class="failure-result failure-result-v2" id="failureResult" aria-live="polite">
-<div class="failure-result-head"><div><small>当前判断</small><b id="failureName">正常保持</b></div><span>先看表面，再看剖面</span></div>
+<div class="failure-result-head"><div><small>当前判断</small><b id="failureName">正常保持</b></div><span id="failureDecision">ABS · 常规路线可行</span></div>
 <div class="failure-story">
 <div><span>为什么发生</span><b id="failureCause">材料、前处理、涂层柔韧性和固化窗口相互匹配</b></div>
 <div><span>肉眼会看见</span><b id="failureVisible">颜色、光泽、边缘和层间附着保持稳定</b></div>
@@ -435,7 +449,7 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 </article>
 </div>
 <div class="foundation-principle"><div><b>颜色不是单独存在的。</b><p>相同色值遇到不同纹理、光泽、膜厚和观察角度，会形成不同的视觉颜色。</p></div><div><b>“喷涂开裂”必须先分层。</b><p>先判断是塑料基材裂、涂膜裂、界面起皮，还是上层溶剂造成咬底，再决定找材料、注塑、结构或涂装团队。</p></div></div>
-<p class="foundation-sources">原理参考：<a href="https://www.byk-instruments.com/support/knowledge/white-papers/appearance/gloss-measurement" target="_blank" rel="noreferrer">BYK 光泽与表面外观</a>、<a href="https://www.xrite.com/zh-cn/blog/visualizing-surface-texture" target="_blank" rel="noreferrer">X-Rite 颜色/纹理/光泽关系</a>、<a href="https://solutions.covestro.com/-/media/covestro/solution-center/story/brochures/wp_makrolon---the-chemical-resistance.pdf" target="_blank" rel="noreferrer">Covestro PC 化学介质与应力开裂</a>。示意用于理解失效机理，不替代真实材料与涂层验证。</p>
+<p class="foundation-sources">原理参考：<a href="https://www.byk-instruments.com/support/knowledge/white-papers/appearance/gloss-measurement" target="_blank" rel="noreferrer">BYK 光泽与表面外观</a>、<a href="https://www.xrite.com/zh-cn/blog/visualizing-surface-texture" target="_blank" rel="noreferrer">X-Rite 颜色/纹理/光泽关系</a>、<a href="https://solutions.covestro.com/-/media/covestro/solution-center/story/brochures/wp_makrolon---the-chemical-resistance.pdf" target="_blank" rel="noreferrer">Covestro PC 化学介质与应力开裂</a>、<a href="https://www.sabic.com/en/industries/automotive/polymers/exteriors" target="_blank" rel="noreferrer">SABIC PC/ABS 喷涂应用</a>、<a href="https://www.celanese.com/-/media/Engineered%20Materials/Files/Product%20Sell%20Sheets/POM-062_HostaformProductManual_EU_EN_0614.pdf" target="_blank" rel="noreferrer">Celanese POM 表面装饰指南</a>。材料联动为材料族趋势，用于理解失效机理，不替代真实材料、涂层体系与装配状态验证。</p>
 </div></section>
 
 <section class="chapter" id="theory"><div class="wrap">
@@ -735,12 +749,27 @@ function initFoundationLabs(){
   peel:{name:"界面起皮 / 脱层",layer:"涂层从基材—底涂或底涂—色漆界面分离",cause:"油污/脱模剂、低表面能、前处理不足或超过重涂窗口导致附着不足",visible:"边缘翘起，胶带或划格后可整片揭起，基材本身不一定开裂",action:"检查清洁、表面能、活化与底涂；完成百格、剥离、湿热和冷热冲击"},
   bite:{name:"咬底 / 起皱",layer:"上层溶剂重新软化或溶解尚未稳定的下层涂膜",cause:"底漆闪干不足、层间化学体系不相容或面漆溶剂攻击性过强",visible:"起皱、返黏、失光、局部隆起或底色被重新带起",action:"调整层间相容、溶剂攻击性、闪干与固化窗口，制作完整叠层样板"}
  };
+ const failureMaterials={
+  "ABS":{route:"常规可喷涂",decision:"常规路线可行",primary:"peel",focus:"优先排查界面附着",summary:"外观与喷涂适配通常较好；强溶剂更常造成表面溶胀、失光或涂层侵蚀，不能简单套用 PC 式应力开裂。",verify:"先确认清洁、脱模剂残留及真实稀释剂/油漆组合"},
+  "PC/ABS":{route:"可喷涂 · 需体系适配",decision:"有条件可用",primary:"substrate",focus:"优先排查残余应力＋溶剂",summary:"喷涂应用很常见；PC 比例、阻燃体系与成型应力会改变溶剂敏感性，不能把整个材料族判为不适合喷涂。",verify:"先做偏光应力检查，再以装配定载状态接触真实涂料"},
+  "PC":{route:"低攻击涂料体系",decision:"有条件可用",primary:"substrate",focus:"优先排查应力开裂",summary:"可以喷涂，但涂料溶剂攻击性、闪干条件与注塑/装配应力必须一起评估，损伤还可能延迟出现。",verify:"优先做偏光应力、装配定载＋真实涂料及延迟观察"},
+  "POM":{route:"专用前处理 / 底涂",decision:"特殊路线后评估",primary:"peel",focus:"优先排查附着不足",summary:"表面难粘接，不能把普通塑料的火焰或电晕处理直接照搬；应按材料与涂料供应商确认专用底涂或处理路线。",verify:"核对专用底涂/处理路线，并做百格、湿热和老化后附着"},
+  "PA66 GF30":{route:"封闭底涂＋干湿态验证",decision:"处理后可评估",primary:"peel",focus:"优先排查纤维界面与吸湿",summary:"玻纤、吸湿与表面粗糙会共同影响流平、光泽和附着；喷涂可行，但干燥样板不能代表吸湿后的长期状态。",verify:"对比干态/调湿态样板，检查浮纤封闭、百格和冷热循环"},
+  "PET GF30":{route:"严格干燥＋封闭底涂",decision:"处理后可评估",primary:"peel",focus:"优先排查浮纤与界面附着",summary:"玻纤流向、表面结晶状态与干燥控制会改变光泽和涂层界面；高光路线尤其容易放大纤维纹理。",verify:"确认原料干燥、封闭底涂及热循环后的纤维显露与附着"},
+  "PPA GF":{route:"高温兼容涂层体系",decision:"需专项验证",primary:"film",focus:"优先排查热循环后的涂膜裂",summary:"基材耐热不等于涂层也耐热；玻纤表面、材料与涂层热膨胀差异可能在冷热循环后形成光泽差或细裂。",verify:"核对固化温度、膜厚与热膨胀匹配，并做多轮冷热循环"},
+  "PPS GF":{route:"专用活化＋底涂",decision:"需专项验证",primary:"peel",focus:"优先排查低附着与纤维表面",summary:"耐化学和耐热能力突出，但表面附着与玻纤外观仍需专门体系；不应因基材耐热就默认普通喷涂可直接使用。",verify:"由材料/涂料供应商确认活化与底涂，再做湿热、热循环和百格"}
+ };
+ let currentFailure="normal",currentFailureMaterial="ABS";
  function setFailure(key){
-  const d=failures[key];el("coatingStage").className="coating-stage state-"+key;el("coatingSurface").className="coating-surface state-"+key;el("coatingSurface").dataset.status=d.name;
-  el("failureName").textContent=d.name;el("failureLayer").textContent=d.layer;el("failureCause").textContent=d.cause;el("failureVisible").textContent=d.visible;el("failureAction").textContent=d.action;
-  document.querySelectorAll("[data-failure]").forEach(b=>{const on=b.dataset.failure===key;b.classList.toggle("active",on);b.setAttribute("aria-pressed",on)})
+  currentFailure=key;const d=failures[key],m=failureMaterials[currentFailureMaterial];
+  el("coatingStage").className="coating-stage state-"+key;el("coatingSurface").className="coating-surface state-"+key;el("coatingSurface").dataset.status=d.name;
+  el("failureName").textContent=d.name;el("failureLayer").textContent=d.layer;el("failureCause").textContent=d.cause;el("failureVisible").textContent=d.visible;el("failureAction").textContent=m.verify+"；"+d.action;el("failureDecision").textContent=currentFailureMaterial+" · "+m.decision;
+  document.querySelectorAll("[data-failure]").forEach(b=>{const on=b.dataset.failure===key;b.classList.toggle("active",on);b.classList.toggle("recommended",b.dataset.failure===m.primary);b.setAttribute("aria-pressed",on)})
  }
- document.querySelectorAll("[data-failure]").forEach(b=>b.addEventListener("click",()=>setFailure(b.dataset.failure)));setFailure("normal");linkTerms(root)
+ function setFailureMaterial(name){
+  currentFailureMaterial=name;const m=failureMaterials[name];el("failureRoute").textContent=m.route;el("failureMaterialFocus").textContent=name+" · "+m.focus;el("failureMaterialSummary").textContent=m.summary;setFailure(m.primary)
+ }
+ document.querySelectorAll("[data-failure]").forEach(b=>b.addEventListener("click",()=>setFailure(b.dataset.failure)));el("failureMaterial").addEventListener("change",e=>setFailureMaterial(e.target.value));setFailureMaterial("ABS");linkTerms(root)
 }
 
 function renderTheory(name){currentMat=name;const d=M[name];document.querySelectorAll(".mat-tab").forEach(x=>x.classList.toggle("active",x.dataset.mat===name));el("pelletWindow").style.backgroundPosition=d.pos;el("specimenName").textContent=name+" · 典型粒子参考";el("matName").textContent=name;el("matTag").textContent=d.tag;el("matDesc").textContent=d.desc.split("。")[0]+"。";el("quickUse").textContent=d.apps[0][1];el("quickFinish").textContent=CMF[name].strategy;el("quickRisk").textContent=CMF[name].keyrisk;el("metrics").innerHTML=[["相对材料成本",d.price,"普通 ABS=1.0｜特殊体系价格可能重叠"],["典型密度",d.density+" g/cm³","材料族常见范围｜影响重量与手感"],["典型注塑熔体温度",d.melt,"常见加工范围｜不是量产设定值"],["本体色与外观潜力",CMF[name].look,"颜色受配方、色母与再生比例影响"],["二次工艺适配",CMF[name].strategy,"喷涂/电镀/印刷需分别验证"],["首要 CMF 风险",CMF[name].keyrisk,"材料族预判｜进入样板验证矩阵"]].map(x=>'<div class="metric"><span>'+x[0]+'</span><b>'+x[1]+'</b><em>'+x[2]+'</em></div>').join("");el("priceWhy").textContent=d.why;el("applications").innerHTML=facts(d.apps);el("processFacts").innerHTML=facts(d.process);el("finishFacts").innerHTML=facts(d.finish);el("riskGrid").innerHTML=d.risks.map((x,i)=>'<div class="risk"><i>0'+(i+1)+'</i><b>'+x[0]+'</b><p>'+x[1]+'</p></div>').join("");el("verifyList").innerHTML='<span>建议验证</span>'+d.verify.map(x=>'<span>'+x+'</span>').join("");const c=COST[name];el("costTitle").textContent="为什么 "+name+" 的相对价格约为 "+d.price+"？";el("costSummary").textContent=d.why;el("costSupply").textContent=c.supply;el("costProcess").textContent=c.process;el("costYield").textContent=c.yield;el("costCmf").textContent=c.cmf;renderProductCase(name);linkTerms(el("theory"))}
