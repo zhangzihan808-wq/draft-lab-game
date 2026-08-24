@@ -272,6 +272,19 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 @media(max-width:680px){#basics{padding-top:78px}.foundation-lab{padding:18px;border-radius:24px}.foundation-lab-head{display:block}.foundation-control{grid-template-columns:1fr}.failure-choice{grid-template-columns:1fr 1fr}.failure-choice button:first-child{grid-column:1/-1}.appearance-stage,.coating-stage{min-height:250px}.appearance-sample{width:88%}.foundation-principle,.failure-facts{grid-template-columns:1fr}.foundation-intro h2{font-size:52px}}
 
 
+/* Integrated CMF brief and recommendation v4 */
+.cmf-context-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.cmf-context-controls label{display:flex;flex-direction:column;gap:6px}.cmf-context-controls label span{color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.08em}
+.cmf-context-controls select{width:100%;height:44px;padding:0 34px 0 12px;border:1px solid var(--line);border-radius:13px;background:#fffdfa;color:var(--ink);font:inherit;font-size:13px;font-weight:800}
+.cmf-recommendation{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.cmf-recommendation header{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:11px}.cmf-recommendation header small{display:block;color:var(--rose);font-size:9px;font-weight:800;letter-spacing:.1em}.cmf-recommendation header h4{margin:4px 0 0;font-size:17px}.cmf-recommendation header>span{max-width:58%;color:var(--muted);font-size:10px;text-align:right;line-height:1.5}
+.cmf-rec-primary{padding:15px 16px;border-radius:17px;background:#191817;color:#fff}.cmf-rec-primary small,.cmf-rec-secondary small{color:#aaa49e;font-size:10px}.cmf-rec-primary b{display:block;margin:3px 0;font-size:27px}.cmf-rec-primary p{margin:0;color:#d6d0ca;font-size:11px;line-height:1.5}
+.cmf-rec-secondary{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}.cmf-rec-secondary>div{padding:13px 14px}.cmf-rec-secondary>div+div{border-left:1px solid var(--line)}.cmf-rec-secondary b{display:block;margin:3px 0;font-size:16px}.cmf-rec-secondary p{margin:0;color:var(--muted);font-size:10px;line-height:1.45}
+.cmf-key-risk{display:grid;grid-template-columns:88px 1fr;gap:10px;align-items:start;margin-top:10px;padding:11px 13px;border-radius:13px;background:#f4e5e1}.cmf-key-risk span{color:#9a433c;font-size:10px}.cmf-key-risk b{font-size:11px;line-height:1.5}
+.cmf-recommendation details{margin-top:7px}.cmf-recommendation summary{padding:10px 2px;cursor:pointer;font-size:11px;font-weight:800}.cmf-recommendation details>div{padding:0 2px 7px;color:var(--muted);font-size:10px;line-height:1.6}.cmf-recommendation details p{margin:0 0 7px}.cmf-recommendation details b{color:var(--ink)}
+@media(max-width:820px){.cmf-context-controls{grid-template-columns:1fr}.cmf-recommendation header{display:block}.cmf-recommendation header>span{display:block;max-width:none;margin-top:5px;text-align:left}}
+@media(max-width:430px){.cmf-rec-secondary{grid-template-columns:1fr}.cmf-rec-secondary>div+div{border-left:0;border-top:1px solid var(--line)}.cmf-key-risk{grid-template-columns:1fr}}
+
 /* Coating failure lab v3 · material-linked */
 .coating-material-control{display:grid;grid-template-columns:165px 1fr;gap:10px;margin-bottom:14px;padding:12px;border-radius:18px;background:#191817;color:#fff}
 .coating-material-control label{display:flex;flex-direction:column;gap:7px}.coating-material-control label span{color:#bdb7b0;font-size:10px;font-weight:800;letter-spacing:.1em}
@@ -374,7 +387,11 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 <div class="foundation-intro"><div><span class="eyebrow">00 · CMF FOUNDATION LAB</span><h2>先看懂外观，<br>再认识材料。</h2></div><p>颜色、纹理和光泽不是三个互不相关的选项；喷涂“开裂”也不是一种缺陷。先用两组可操作的基础实验看懂光如何改变颜色，以及基材、底涂和面漆究竟在哪一层失效。</p></div>
 <div class="foundation-grid">
 <article class="foundation-lab" aria-labelledby="appearanceLabTitle">
-<div class="foundation-lab-head"><div><small>01 · APPEARANCE</small><h3 id="appearanceLabTitle">同一个颜色，为什么看起来不同？</h3><p>保持色值不变，只改变表面微结构与镜面反射。</p></div></div>
+<div class="foundation-lab-head"><div><small>01 · CMF TARGET</small><h3 id="appearanceLabTitle">先定义你想要的外观。</h3><p>部件与表面路线先定边界，再调整颜色、纹理和光泽。</p></div></div>
+<div class="cmf-context-controls">
+<label for="foundationPart"><span>产品部件</span><select id="foundationPart"><option value="shell">机身外壳</option><option value="outlet">出风口装饰 / 风道</option><option value="control">按键 / 拨片</option><option value="hinge">转轴 / 骨架</option></select></label>
+<label for="foundationRoute"><span>表面路线</span><select id="foundationRoute"><option value="paint">喷涂</option><option value="native">本体着色</option><option value="vacuum">真空镀 / PVD</option></select></label>
+</div>
 <div class="appearance-stage">
 <div class="appearance-sample texture-smooth" id="appearanceSample" role="img" aria-label="当前颜色、纹理和光泽组合的CMF样板"></div>
 <div class="appearance-stage-label"><span id="appearanceTextureLabel">光面</span><span id="appearanceGlossLabel">高光 · 80 GU趋势</span></div>
@@ -397,10 +414,20 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 <div class="appearance-chip high" data-label="高光"></div><div class="appearance-chip satin" data-label="半哑光"></div><div class="appearance-chip matte" data-label="哑光"></div>
 </div>
 <div class="foundation-result" aria-live="polite"><small>你现在看到</small><b id="appearanceConclusion">同一珊瑚红，高光让颜色显得更深、更饱和，倒影和缺陷也更明显。</b><p id="appearanceRisk">高光平面会放大流痕、缩水、焊线与划伤。</p></div>
+<section class="cmf-recommendation" aria-labelledby="cmfRecommendationTitle" aria-live="polite">
+<header><div><small>材料族规则推荐 · 非最终定案</small><h4 id="cmfRecommendationTitle">当前 CMF 目标</h4></div><span id="decisionBrief">机身外壳 · 喷涂 · 珊瑚红 · 光面高光</span></header>
+<div class="cmf-rec-primary"><small>优先候选</small><b id="decisionRec">PC/ABS</b><p id="decisionRecWhy">兼顾外观、韧性、流动和常用喷涂路线。</p></div>
+<div class="cmf-rec-secondary">
+<div><small>备选</small><b id="decisionAlt">ABS</b><p id="decisionAltWhy">外观与加工友好，需确认热区边界。</p></div>
+<div><small>谨慎使用</small><b id="decisionCaution">PC</b><p id="decisionCautionWhy">可喷涂，但要优先验证应力与溶剂组合。</p></div>
+</div>
+<div class="cmf-key-risk"><span>当前最应盯</span><b id="decisionRisk">高光会放大底材和涂层的细小缺陷。</b></div>
+<details><summary>为什么这样推荐？</summary><div><p id="decisionWhy"></p><b>样板验证：<span id="decisionVerify"></span></b></div></details>
+</section>
 </article>
 
 <article class="foundation-lab" aria-labelledby="coatingLabTitle">
-<div class="foundation-lab-head"><div><small>02 · COATING FAILURE</small><h3 id="coatingLabTitle">同一套喷涂，换一种基材会怎样？</h3><p>先选塑料基材，再切换失效工况；表面现象、失效层和验证重点会一起改变。</p></div></div>
+<div class="foundation-lab-head"><div><small>02 · COATING FAILURE</small><h3 id="coatingLabTitle">同一套喷涂，换一种基材会怎样？</h3><p id="coatingContextNote">当前推荐材料会自动同步到这里；也可以手动换材料检查其他失效机制。</p></div></div>
 <div class="coating-material-control">
 <label for="failureMaterial"><span>01 · 塑料基材</span><select id="failureMaterial">
 <option>ABS</option><option>PC/ABS</option><option>PC</option><option>POM</option><option>PA66 GF30</option><option>PET GF30</option><option>PPA GF</option><option>PPS GF</option>
@@ -738,10 +765,10 @@ function initFoundationLabs(){
   el("appearanceRisk").textContent=textureRisk[texture];
  }
  document.querySelectorAll("[data-foundation-color]").forEach(b=>b.addEventListener("click",()=>{
-  color=b.dataset.foundationColor;colorName=b.getAttribute("aria-label");document.querySelectorAll("[data-foundation-color]").forEach(x=>{const on=x===b;x.classList.toggle("active",on);x.setAttribute("aria-pressed",on)});updateAppearance()
+  color=b.dataset.foundationColor;colorName=b.getAttribute("aria-label");document.querySelectorAll("[data-foundation-color]").forEach(x=>{const on=x===b;x.classList.toggle("active",on);x.setAttribute("aria-pressed",on)});updateAppearance();updateDecision(false)
  }));
- document.querySelectorAll("[data-foundation-texture]").forEach(b=>b.addEventListener("click",()=>{texture=b.dataset.foundationTexture;document.querySelectorAll("[data-foundation-texture]").forEach(x=>x.classList.toggle("active",x===b));updateAppearance()}));
- gloss.addEventListener("input",updateAppearance);updateAppearance();
+ document.querySelectorAll("[data-foundation-texture]").forEach(b=>b.addEventListener("click",()=>{texture=b.dataset.foundationTexture;document.querySelectorAll("[data-foundation-texture]").forEach(x=>x.classList.toggle("active",x===b));updateAppearance();updateDecision(false)}));
+ gloss.addEventListener("input",()=>{updateAppearance();updateDecision(false)});updateAppearance();
  const failures={
   normal:{name:"正常保持",layer:"基材和各涂层均保持完整",cause:"材料、前处理、涂层柔韧性和固化窗口相互匹配",visible:"颜色、光泽、边缘和层间附着保持稳定",action:"进入百格、冷热冲击、介质和实际装配样板验证"},
   substrate:{name:"基材应力开裂",layer:"裂纹从塑料基材内部或表层开始，不只是油漆裂",cause:"注塑残余应力或装配应力叠加涂料溶剂，基材通过裂纹释放被锁住的势能",visible:"细密发白、龟裂或延迟裂纹；透明件可能先出现雾化",action:"检查偏光应力、圆角/螺丝柱、模温保压，并做装配定载＋真实溶剂组合验证"},
@@ -759,6 +786,41 @@ function initFoundationLabs(){
   "PPA GF":{route:"高温兼容涂层体系",decision:"需专项验证",primary:"film",focus:"优先排查热循环后的涂膜裂",summary:"基材耐热不等于涂层也耐热；玻纤表面、材料与涂层热膨胀差异可能在冷热循环后形成光泽差或细裂。",verify:"核对固化温度、膜厚与热膨胀匹配，并做多轮冷热循环"},
   "PPS GF":{route:"专用活化＋底涂",decision:"需专项验证",primary:"peel",focus:"优先排查低附着与纤维表面",summary:"耐化学和耐热能力突出，但表面附着与玻纤外观仍需专门体系；不应因基材耐热就默认普通喷涂可直接使用。",verify:"由材料/涂料供应商确认活化与底涂，再做湿热、热循环和百格"}
  };
+ const decisionMatrix={
+  shell:{
+   paint:{rec:["PC/ABS","兼顾外观、韧性、流动和个护外壳常用喷涂路线。"],alt:["ABS","着色与表面效果友好，需确认持续热区和强冲击边界。"],caution:["PC","可以喷涂，但应力与涂料溶剂必须组合验证。"],why:"机身外壳首先需要大面积外观稳定、装配韧性和可量产的表面路线；PC/ABS通常是更均衡的起点。",verify:"同色同光泽样板、偏光应力、装配定载＋涂料、手汗/化妆品和冷热循环"},
+   native:{rec:["PC/ABS","本体色、纹理复制和韧性之间较均衡。"],alt:["ABS","颜色自由度高，普通外观件量产成熟。"],caution:["PC","透明或特殊韧性需求才优先；高光表面更容易显划伤。"],why:"本体着色不靠涂层遮盖，底材色、流痕、焊线和批次稳定性会直接成为最终外观。",verify:"同模同纹理色板、色差/光泽、焊线与缩水、热老化和批次复色"},
+   vacuum:{rec:["PC/ABS","适合通过底漆、金属层和保护层实现装饰金属感。"],alt:["ABS","装饰金属化应用成熟，但仍需匹配底涂和保护层。"],caution:["PC","可实现，但底涂溶剂、应力和固化温度要优先验证。"],why:"真空镀的最终效果取决于底材平整度、底漆流平、金属层与保护涂层，不是只看树脂名称。",verify:"底漆附着与流平、遮蔽边界、金属层发花、保护层耐磨及装配后裂纹"}
+  },
+  outlet:{
+   paint:{rec:["PET GF30","适合热区风道趋势，但外观喷涂需封闭浮纤并严格干燥。"],alt:["PPA GF","更高温边界可评估，成本和涂层热匹配要求更高。"],caution:["PC/ABS","可用于隔热后的装饰外盖，不宜仅凭外观直接进入持续热风边界。"],why:"出风口同时受到热、风道结构和可见外观约束，必须把热区承载件与外观装饰件的边界分清。",verify:"实际热风温升、封闭底涂、浮纤/光泽、冷热循环及长期热老化"},
+   native:{rec:["PET GF30","高刚度和热区应用趋势明确，符合当前产品案例口径。"],alt:["PA66 GF30","结构性能成熟，但吸湿和纤维取向会影响尺寸与外观。"],caution:["PPA GF","适合更高温边界，需确认成本与是否真的需要该性能窗口。"],why:"本体外观会直接暴露玻纤流向、浮纤和光泽差，因此结构满足并不等于可见面自然合格。",verify:"真实温升、干燥/调湿状态、纤维取向、翘曲、色差与光泽均匀性"},
+   vacuum:{rec:["PC/ABS","更适合作为与热风道隔离的金属化装饰圈或外盖。"],alt:["ABS","可用于远离高温的装饰件，工艺路线成熟。"],caution:["PET GF30","承热结构可以保留，但直接做高亮金属化会放大浮纤与底材纹理。"],why:"高亮金属化会放大任何底材不平整；较稳妥的做法是让承热风道与装饰表皮分件承担不同任务。",verify:"热隔离边界、底漆遮盖、金属层发花、冷热循环和装配间隙"}
+  },
+  control:{
+   paint:{rec:["PC/ABS","兼顾触控区外观、韧性与喷涂适配。"],alt:["ABS","普通按键外观和加工友好，需验证磨耗与化妆品接触。"],caution:["POM","适合滑动功能，但表面附着困难，不应默认采用普通喷涂。"],why:"按键既是高频触摸面又可能是运动件；外观表皮与低摩擦功能不能只靠一种材料属性解释。",verify:"手汗/护肤品、防晒霜、印刷与涂层耐磨、边缘附着和按压寿命"},
+   native:{rec:["PC/ABS","适合兼顾手感、外观和薄壁韧性。"],alt:["ABS","颜色和纹理自由度较好，适合普通静态按键。"],caution:["POM","滑动拨片功能有优势，但本体色与高端外观自由度较有限。"],why:"本体色按键没有涂层遮盖，擦亮、熔接痕、顶针痕和色差会直接保留在可见面。",verify:"纹理复制、色差、擦亮、手汗/化妆品、按压摩擦与印刷耐久"},
+   vacuum:{rec:["PC/ABS","可通过底涂与保护层形成装饰金属效果。"],alt:["ABS","适合普通金属化按键与装饰件。"],caution:["POM","运动功能适合，但金属化附着需要专门表面路线。"],why:"小按键金属化最容易在边缘、卡扣与高频接触区暴露遮蔽、附着和耐磨问题。",verify:"边缘包覆、遮蔽、百格、汗液/化妆品、摩擦和按键寿命"}
+  },
+  hinge:{
+   paint:{rec:["PA66 GF30","承载骨架可优先评估，但可见喷涂面需要封闭纤维并验证吸湿。"],alt:["PPA GF","高温与刚度边界更高，需验证涂层热循环匹配。"],caution:["POM","适合低摩擦运动件，但普通喷涂附着并不友好。"],why:"转轴首先是载荷与寿命问题；如果又承担可见外观，应把纤维、吸湿、应力和涂层柔韧性同时纳入。",verify:"循环载荷、调湿前后尺寸、封闭底涂、装配应力和冷热循环后细裂"},
+   native:{rec:["PA66 GF30","高刚度承载骨架的常用趋势，需控制吸湿与各向异性。"],alt:["POM","适合轴套、滑动或低摩擦运动功能。"],caution:["PPA GF","更高温边界可用，但不应在普通温区无依据升级成本。"],why:"转轴/骨架的材料决策以载荷、疲劳、摩擦与尺寸稳定为先，CMF只评价它暴露出来的可见表面。",verify:"循环疲劳、蠕变、调湿尺寸、玻纤方向、摩擦磨耗和装配间隙"},
+   vacuum:{rec:["PC/ABS","建议将金属化装饰盖与承载转轴分件，让外观和结构各自优化。"],alt:["ABS","可作为远离主载荷的装饰盖。"],caution:["PA66 GF30","承载性能好，但直接高亮金属化会放大纤维并增加附着难度。"],why:"把高亮装饰层直接叠在受载玻纤骨架上，会把表面缺陷与循环形变风险绑在一起；分件通常更清楚。",verify:"装饰盖与骨架分件边界、遮蔽、装配摩擦、循环后镀层细裂和间隙"}
+  }
+ };
+ const partBriefNames={shell:"机身外壳",outlet:"出风口装饰 / 风道",control:"按键 / 拨片",hinge:"转轴 / 骨架"};
+ const routeBriefNames={paint:"喷涂",native:"本体着色",vacuum:"真空镀 / PVD"};
+ function updateDecision(syncMaterial){
+  const part=el("foundationPart").value,route=el("foundationRoute").value,d=decisionMatrix[part][route],g=+gloss.value;
+  const glossRisk=g>=70?"高光会放大底材起伏、焊线、浮纤和涂层细裂":g>=30?"半哑光较均衡，但仍要控制局部光泽差":"低光泽会弱化倒影，同时更依赖纹理均匀和耐擦亮";
+  const textureRisk=texture==="smooth"?"光面直接暴露流痕与缩水":texture==="fine"?"细纹要防局部复制差":"粗纹要防沟槽积漆与纹理顶部露底";
+  const routeRisk=route==="paint"?"；喷涂还要验证底涂、溶剂、膜厚和固化":route==="vacuum"?"；真空镀要验证底漆流平、金属层发花和保护层耐磨":"；本体色要控制批次色差、焊线和热老化";
+  el("decisionBrief").textContent=partBriefNames[part]+" · "+routeBriefNames[route]+" · "+colorName+" · "+textureNames[texture]+" · "+g+" GU趋势";
+  el("decisionRec").textContent=d.rec[0];el("decisionRecWhy").textContent=d.rec[1];el("decisionAlt").textContent=d.alt[0];el("decisionAltWhy").textContent=d.alt[1];el("decisionCaution").textContent=d.caution[0];el("decisionCautionWhy").textContent=d.caution[1];
+  el("decisionRisk").textContent=glossRisk+"；"+textureRisk+routeRisk+"。";el("decisionWhy").textContent=d.why;el("decisionVerify").textContent=d.verify;
+  el("coatingContextNote").textContent=route==="paint"?"当前优先候选已同步到喷涂失效预检；也可以手动换材料。":route==="vacuum"?"真空镀仍包含底涂与保护涂层；右侧用于预检相关涂层失效。":"当前选择本体着色；右侧保留为后续改用喷涂时的失效预检。";
+  if(syncMaterial){el("failureMaterial").value=d.rec[0];setFailureMaterial(d.rec[0])}
+ }
  let currentFailure="normal",currentFailureMaterial="ABS";
  function setFailure(key){
   currentFailure=key;const d=failures[key],m=failureMaterials[currentFailureMaterial];
@@ -769,7 +831,8 @@ function initFoundationLabs(){
  function setFailureMaterial(name){
   currentFailureMaterial=name;const m=failureMaterials[name];el("failureRoute").textContent=m.route;el("failureMaterialFocus").textContent=name+" · "+m.focus;el("failureMaterialSummary").textContent=m.summary;setFailure(m.primary)
  }
- document.querySelectorAll("[data-failure]").forEach(b=>b.addEventListener("click",()=>setFailure(b.dataset.failure)));el("failureMaterial").addEventListener("change",e=>setFailureMaterial(e.target.value));setFailureMaterial("ABS");linkTerms(root)
+ document.querySelectorAll("[data-failure]").forEach(b=>b.addEventListener("click",()=>setFailure(b.dataset.failure)));el("failureMaterial").addEventListener("change",e=>setFailureMaterial(e.target.value));
+ el("foundationPart").addEventListener("change",()=>updateDecision(true));el("foundationRoute").addEventListener("change",()=>updateDecision(true));setFailureMaterial("ABS");updateDecision(true);linkTerms(root)
 }
 
 function renderTheory(name){currentMat=name;const d=M[name];document.querySelectorAll(".mat-tab").forEach(x=>x.classList.toggle("active",x.dataset.mat===name));el("pelletWindow").style.backgroundPosition=d.pos;el("specimenName").textContent=name+" · 典型粒子参考";el("matName").textContent=name;el("matTag").textContent=d.tag;el("matDesc").textContent=d.desc.split("。")[0]+"。";el("quickUse").textContent=d.apps[0][1];el("quickFinish").textContent=CMF[name].strategy;el("quickRisk").textContent=CMF[name].keyrisk;el("metrics").innerHTML=[["相对材料成本",d.price,"普通 ABS=1.0｜特殊体系价格可能重叠"],["典型密度",d.density+" g/cm³","材料族常见范围｜影响重量与手感"],["典型注塑熔体温度",d.melt,"常见加工范围｜不是量产设定值"],["本体色与外观潜力",CMF[name].look,"颜色受配方、色母与再生比例影响"],["二次工艺适配",CMF[name].strategy,"喷涂/电镀/印刷需分别验证"],["首要 CMF 风险",CMF[name].keyrisk,"材料族预判｜进入样板验证矩阵"]].map(x=>'<div class="metric"><span>'+x[0]+'</span><b>'+x[1]+'</b><em>'+x[2]+'</em></div>').join("");el("priceWhy").textContent=d.why;el("applications").innerHTML=facts(d.apps);el("processFacts").innerHTML=facts(d.process);el("finishFacts").innerHTML=facts(d.finish);el("riskGrid").innerHTML=d.risks.map((x,i)=>'<div class="risk"><i>0'+(i+1)+'</i><b>'+x[0]+'</b><p>'+x[1]+'</p></div>').join("");el("verifyList").innerHTML='<span>建议验证</span>'+d.verify.map(x=>'<span>'+x+'</span>').join("");const c=COST[name];el("costTitle").textContent="为什么 "+name+" 的相对价格约为 "+d.price+"？";el("costSummary").textContent=d.why;el("costSupply").textContent=c.supply;el("costProcess").textContent=c.process;el("costYield").textContent=c.yield;el("costCmf").textContent=c.cmf;renderProductCase(name);linkTerms(el("theory"))}
