@@ -348,6 +348,34 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 /* Separate material exam entry v39 */
 .material-exam-entry{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:stretch;margin-top:32px;padding:clamp(28px,5vw,68px);border-radius:34px;background:var(--ink);color:#fff}.material-exam-entry h3{max-width:900px;margin:10px 0 20px;font-size:clamp(42px,6vw,88px);line-height:1;letter-spacing:-.055em}.material-exam-entry p{max-width:760px;margin:0;color:#d4cdc5;font-size:17px;line-height:1.75}.material-exam-entry .entry-action{display:inline-flex;align-items:center;gap:14px;margin-top:28px;padding:15px 22px;border-radius:999px;background:#fff;color:var(--ink);font-weight:800}.material-exam-entry .entry-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.material-exam-entry .entry-meta div{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:22px;border-radius:22px;background:#ffffff12}.material-exam-entry .entry-meta b{font-size:46px}.material-exam-entry .entry-meta span{color:#d4cdc5;font-size:13px;line-height:1.5}@media(max-width:820px){.material-exam-entry{grid-template-columns:1fr}.material-exam-entry .entry-meta div{min-height:110px}}@media(max-width:480px){.material-exam-entry .entry-meta{grid-template-columns:1fr}.material-exam-entry h3{font-size:42px}}
 
+
+/* v49 · restrained visual polish */
+body{background:
+radial-gradient(circle at 8% 0%,#ffffffc7 0,transparent 30%),
+radial-gradient(circle at 96% 22%,#ead8d052 0,transparent 27%),
+var(--paper)}
+.site-nav{border-bottom-color:#d6cec4cc;box-shadow:0 8px 30px #3d30220a}
+.main-nav a,.primary,.secondary,.run-btn,.material-exam-entry .entry-action{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
+.main-nav a:hover{transform:translateY(-1px)}
+.primary:hover,.run-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 13px 28px #17151320}
+.secondary:hover{transform:translateY(-2px);border-color:#aaa097;background:#fffaf5;box-shadow:0 10px 24px #3c30220c}
+.hero-board{box-shadow:0 38px 100px #4536291c}
+.section-head{padding-bottom:22px;border-bottom:1px solid #d9d2ca}
+.material-shell{border:1px solid #d8d1c9;border-radius:30px;background:#fbf8f4b8;box-shadow:0 24px 70px #49392a0b}
+.material-tabs{padding:18px 14px 24px;background:#eee8e155}
+.material-content{padding:34px 32px 38px 36px}
+.mat-tab{border-radius:12px;padding-left:12px;padding-right:12px;transition:background .2s ease,box-shadow .2s ease,transform .2s ease}
+.mat-tab:hover{background:#ffffff8c;transform:translateX(2px)}
+.mat-tab.active{background:#fffdfa;box-shadow:0 9px 24px #3d30220c}
+.material-exam-entry{background:linear-gradient(135deg,#171513 0%,#29231f 60%,#4a2d28 135%);border:1px solid #ffffff18;box-shadow:0 30px 90px #2b201a26;transition:transform .25s ease,box-shadow .25s ease}
+.material-exam-entry:hover{transform:translateY(-4px);box-shadow:0 38px 110px #2b201a32}
+.material-exam-entry .entry-action:hover{transform:translateX(4px);box-shadow:0 10px 26px #0002}
+.material-exam-entry .entry-meta div{border:1px solid #ffffff14;background:#ffffff10}
+.flow-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.flow-card:not(.disabled):hover{transform:translateY(-3px);border-color:#bdb3aa;box-shadow:0 18px 44px #45362910}
+@media(max-width:1250px){.material-content{padding:30px}.material-tabs{border-radius:29px 29px 0 0}}
+@media(max-width:760px){.section-head{padding-bottom:16px}.material-shell{border-radius:22px}.material-content{padding:22px 16px 28px}.site-nav{box-shadow:0 6px 20px #3d30220a}}
+
 </style>
 </head>
 <body>
@@ -545,7 +573,7 @@ footer{padding:65px 0 38px;border-top:1px solid var(--line)}.footer-grid{display
 
 <section class="chapter" id="material-exam"><div class="wrap">
 <div class="section-head"><div><span class="eyebrow">03 · MATERIAL DECISION EXAM</span><h2>理论到这里结束，<br>考试去独立页面。</h2></div><p>考试不与材料知识混排。进入专门的材料科目一页面，在没有理论答案提示的情况下完成场景判断。</p></div>
-<a class="material-exam-entry" href="material-exam.html?entry=theory&v=48#home"><div><span class="eyebrow">OPEN MATERIAL EXAM</span><h3>四个方案都合理，<br>选当前约束下最合适的。</h3><p>题目加入真实部件工况、颜色纹理、喷涂电镀、失效位置和验证条件。干扰项不再是明显错误，而是“少考虑了一个关键约束”的次优方案。</p><span class="entry-action">进入独立材料科目一 →</span></div><div class="entry-meta"><div><b>60</b><span>高区分度场景题</span></div><div><b>8</b><span>个护常用材料</span></div><div><b>10</b><span>快速训练题数</span></div><div><b>20</b><span>正式考试题数</span></div></div></a>
+<a class="material-exam-entry" href="material-exam.html?entry=theory&v=49#home"><div><span class="eyebrow">OPEN MATERIAL EXAM</span><h3>四个方案都合理，<br>选当前约束下最合适的。</h3><p>题目加入真实部件工况、颜色纹理、喷涂电镀、失效位置和验证条件。干扰项不再是明显错误，而是“少考虑了一个关键约束”的次优方案。</p><span class="entry-action">进入独立材料科目一 →</span></div><div class="entry-meta"><div><b>60</b><span>高区分度场景题</span></div><div><b>8</b><span>个护常用材料</span></div><div><b>10</b><span>快速训练题数</span></div><div><b>20</b><span>正式考试题数</span></div></div></a>
 </div></section>
 <section class="chapter" id="roadmap"><div class="wrap">
 <div class="section-head"><div><span class="eyebrow">04 · FULL CMF PATH</span><h2>不是孤立的<br>材料百科。</h2></div><p>网站按真实产品开发路径组织。材料决定本体色、表面能和缺陷边界；模具决定纹理、光泽与可见成型痕迹；表面工艺决定最终色彩、触感和耐久。</p></div>
