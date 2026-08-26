@@ -928,7 +928,7 @@ function mqLoadQr(){const apply=()=>{const image=document.getElementById('mqQrIm
 document.querySelectorAll('[data-mq-start]').forEach(button=>button.addEventListener('click',()=>mqStart(button.dataset.mqStart)));document.getElementById('mqNext').addEventListener('click',mqNext);
 
 const entryHash=location.hash,keepDeepLink=new URLSearchParams(location.search).get("direct")==="1";
-if(["#basics","#theory","#practice","#roadmap"].includes(entryHash)&&!keepDeepLink){
+if(["#basics","#theory","#practice","#material-exam","#roadmap"].includes(entryHash)&&!keepDeepLink){
  history.replaceState(null,"",location.pathname+location.search);
  const returnToTop=()=>requestAnimationFrame(()=>window.scrollTo({top:0,left:0,behavior:"auto"}));
  if(document.readyState==="complete")returnToTop();else window.addEventListener("load",returnToTop,{once:true})
