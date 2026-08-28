@@ -74,12 +74,32 @@ html{background:var(--bg)}body{background:radial-gradient(circle at 10% 0,#fff 0
 @media(max-width:1050px){.mold-knowledge-head,.mold-topic-hero,.mold-case-grid{grid-template-columns:1fr}.mold-knowledge-shell{grid-template-columns:1fr}.mold-topic-tabs{position:static;display:flex;overflow:auto;padding:0 0 14px;border-right:0}.mold-topic-tab{min-width:190px;border:1px solid var(--line)}.mold-knowledge-main{padding-left:0}.mold-metrics{grid-template-columns:1fr 1fr}.mold-metrics div{border-bottom:1px solid var(--line)}.mold-takeaways{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:680px){.mold-knowledge-head{gap:18px}.mold-scope{display:block}.mold-scope span{display:block;margin-top:8px}.mold-topic-hero .diagram{height:270px}.mold-metrics,.mold-takeaways,.mold-drawers{grid-template-columns:1fr}.mold-metrics div{border-right:0}.mold-drawer.full{grid-column:auto}.mold-case{padding:20px}.mold-case-head{display:block}.mold-case-head p{margin-top:10px}}
 
+
+/* Single-page mold learning flow v54 */
+.single-flow .page{display:block!important;width:min(1380px,calc(100% - 48px));min-height:0;margin:auto;padding:92px 0 104px;border-top:1px solid var(--line);scroll-margin-top:68px}
+.single-flow #homePage{min-height:calc(100vh - 68px);padding-top:64px;border-top:0}
+.single-flow #lessonPage{display:none!important}
+.single-flow #cmfPage,.single-flow #practicePage,.single-flow #examPage{position:relative}
+.single-flow #cmfPage:before,.single-flow #practicePage:before,.single-flow #recordPage:before,.single-flow #examPage:before{display:block;margin-bottom:18px;color:var(--red);font-size:11px;font-weight:950;letter-spacing:.18em}
+.single-flow #cmfPage:before{content:"01 · CMF 外观实验"}
+.single-flow #learnPage:before{content:""}
+.single-flow #practicePage:before{content:"03 · 互动练习"}
+.single-flow #recordPage:before{content:"04 · 学习回顾"}
+.single-flow #examPage:before{content:"05 · 模具科目一 · FINAL"}
+.single-flow #examPage{padding-top:108px;padding-bottom:128px}
+.single-flow #examPage:after{content:"完成前面的观察、知识与练习后，再用考试检查是否真正会判断。";position:absolute;left:0;top:72px;color:var(--muted);font-size:13px}
+.single-flow .main-module-nav{gap:6px;padding:5px;border:1px solid var(--line);border-radius:999px;background:#eeeae4}
+.single-flow .main-module-nav a{min-width:86px;padding:9px 16px;text-align:center;border-radius:999px;color:var(--muted)}
+.single-flow .main-module-nav a.active{background:var(--ink);color:#fff}
+.single-flow .top{background:#f5f3efed}
+@media(max-width:950px){.single-flow .top{display:flex;padding:10px 14px}.single-flow .top .nav{display:flex;margin-left:auto}.single-flow .brand span:last-child{display:none}.single-flow .loss-pill{position:static}.single-flow .page{width:min(100% - 24px,1380px)}}
+@media(max-width:680px){.single-flow .top{gap:8px}.single-flow .main-module-nav a{min-width:auto;padding:8px 11px;font-size:12px}.single-flow .loss-pill{display:none}.single-flow .page{padding:68px 0 78px}.single-flow #homePage{padding-top:46px}.single-flow #examPage{padding-top:92px}.single-flow #examPage:after{top:58px}}
 </style>
 </head>
-<body>
+<body class="single-flow">
 <header class="top">
 <a class="brand" href="#home"><span class="logo">CMF</span><span>个护模具实验室</span></a>
-<nav class="nav" aria-label="主导航"><a class="module-return" href="index.html?v=53#theory">← 材料实验室</a><a href="surface.html?v=53">表面工艺</a><a href="#home">首页</a><a href="#cmf">CMF外观实验</a><a href="#learn">知识学习</a><a href="#practice">互动练习</a><a href="#exam">模具科目一</a><a href="#record">学习记录</a></nav>
+<nav class="nav main-module-nav" aria-label="CMF 三大模块"><a href="index.html?v=54#theory">材料</a><a class="active" href="#home">模具</a><a href="surface.html?v=54">表面工艺</a></nav>
 <div class="loss-pill">本次模拟损失 <b id="headerLoss">¥0</b></div>
 </header>
 <main>
@@ -94,11 +114,11 @@ html{background:var(--bg)}body{background:radial-gradient(circle at 10% 0,#fff 0
 <article class="cmf-exp-work"><header class="cmf-exp-head"><div><p class="eyebrow" id="cmfExpKicker">EXPERIMENT 01</p><h2 id="cmfExpTitle">筋位与缩水</h2></div><p id="cmfExpIntro">改变背面筋厚，观察同一外观面是否出现凹影。</p></header><div class="cmf-visual-stage" id="cmfVisualStage" role="img" aria-live="polite"></div><div class="cmf-exp-controls" id="cmfExpControls"></div><div class="cmf-exp-result" aria-live="polite"><div class="cmf-verdict"><span>当前判断</span><b id="cmfVerdict">—</b></div><div><span>眼睛会看见</span><b id="cmfVisible">—</b></div><div><span>为什么发生</span><b id="cmfMechanism">—</b></div><div><span>CMF 去找谁</span><b id="cmfOwner">—</b></div><div><span>下一步验证</span><b id="cmfVerify">—</b></div></div></article></div>
 <p class="cmf-source-note"><b>阅读依据：</b><a href="https://www.protolabs.com/services/injection-molding/plastic-injection-molding/design-guidelines/" target="_blank" rel="noreferrer">Protolabs 注塑设计指南</a><span>·</span><a href="https://www.protolabs.com/resources/guides-and-trend-reports/enhancing-cosmetic-appearance-on-molded-parts/" target="_blank" rel="noreferrer">外观缺陷指南</a><span>·</span><a href="https://solutions.covestro.com/-/media/covestro/solution-center/whitepapers/gate-design-for-high-quality-surface-finish.pdf" target="_blank" rel="noreferrer">Covestro 浇口与表面质量</a>。数值仅作趋势教学，最终以材料、纹理规范、模流与试模为准。</p>
 </section>
-<section class="page" id="learnPage"><div class="mold-knowledge-head"><div><p class="eyebrow">01 · MOLD KNOWLEDGE</p><h1>先看外观痕迹，<br>再问模具条件。</h1></div><p>和材料页使用同一套判断逻辑：先给 ID / CMF 第一眼结论，再说明可见部位、形成机制、设计边界与验证动作。结构名词只在会影响外观时出现。</p></div><div class="mold-scope"><b>统一口径：按“可见结果 → 形成原因 → 设计提醒 → 验证动作”学习</b><span>不代替模流、模具设计评审与试模签样</span></div><div class="mold-knowledge-shell"><aside class="mold-topic-tabs" id="moduleGrid" aria-label="模具知识主题"></aside><article class="mold-knowledge-main" id="moldKnowledgeMain"></article></div></section>
+<section class="page" id="learnPage"><div class="mold-knowledge-head"><div><p class="eyebrow">02 · MOLD KNOWLEDGE</p><h1>先看外观痕迹，<br>再问模具条件。</h1></div><p>和材料页使用同一套判断逻辑：先给 ID / CMF 第一眼结论，再说明可见部位、形成机制、设计边界与验证动作。结构名词只在会影响外观时出现。</p></div><div class="mold-scope"><b>统一口径：按“可见结果 → 形成原因 → 设计提醒 → 验证动作”学习</b><span>不代替模流、模具设计评审与试模签样</span></div><div class="mold-knowledge-shell"><aside class="mold-topic-tabs" id="moduleGrid" aria-label="模具知识主题"></aside><article class="mold-knowledge-main" id="moldKnowledgeMain"></article></div></section>
 <section class="page" id="lessonPage"><div id="lessonContent"></div></section>
 <section class="page" id="practicePage"><div id="practiceContent"></div></section>
+<section class="page" id="recordPage"><p class="eyebrow">学习回顾</p><h1 class="page-title">先看掌握情况，<br>再进入最后考试。</h1><p class="lead">知识进度与练习结果只保存在当前设备中。模具科目一位于本页最末尾。</p><div class="record-grid" id="recordGrid"></div></section>
 <section class="page" id="examPage"><div id="examContent"></div></section>
-<section class="page" id="recordPage"><p class="eyebrow">你的学习数据</p><h1 class="page-title">学习记录</h1><p class="lead">进度只保存在当前设备中。</p><div class="record-grid" id="recordGrid"></div></section>
 </main>
 <footer class="footer">追觅个护模具实验室 · 图解与模拟仅用于入门学习</footer>
 <div class="toast" id="toast" role="status"></div>
@@ -185,8 +205,9 @@ function answerExam(choice){if(answerLocked)return;answerLocked=true;const q=exa
 function nextExam(){examIndex++;renderExamQuestion()}
 function finishExam(){const score=examCorrect*5,pass=score>=90;state.exams.unshift({date:new Date().toLocaleDateString('zh-CN'),score:score,loss:examWrong.length});state.exams=state.exams.slice(0,5);save();$('examContent').innerHTML='<div class="result-hero"><p class="eyebrow">考试完成</p><div class="result-score">'+score+'</div><h1>'+(pass?'考试合格':'本次未合格')+'</h1><div class="result-grid"><div><b>'+examCorrect+'</b><span>答对</span></div><div><b>'+examWrong.length+'</b><span>答错</span></div><div><b>¥'+examWrong.length+'</b><span>模拟损失</span></div></div><p class="disclaimer">模拟损失只是帮助记忆的游戏数值，不是真实费用。</p>'+(examWrong.length?'<h2>错题与原因</h2><div class="wrong-list">'+examWrong.map(q=>{const m=modules.find(x=>x.id===q.module);return '<button class="wrong-item" onclick="openLesson(\''+m.id+'\')"><b>'+m.title+' · 正确答案：'+q.opts[q.c]+'</b><small>'+q.q+'</small><small class="question-explain">'+q.explain+'　→ 点击重新学习</small></button>'}).join('')+'</div>':'')+ '<div class="actions" style="justify-content:center"><button class="btn primary" onclick="startExam()">换一组重新考试</button><a class="btn" href="#record">查看学习记录</a></div></div>'}
 function renderRecord(){const completed=(state.completed||[]).length,exams=state.exams||[];$('recordGrid').innerHTML='<article class="record-card"><p class="eyebrow">知识进度</p><div class="big-number">'+completed+' / 12</div><div class="progress-bar"><i style="width:'+(completed/12*100)+'%"></i></div><div class="mini-list">'+modules.map(m=>'<div><span>'+m.icon+' '+m.title+'</span><b>'+(state.completed.includes(m.id)?'已掌握':'待学习')+'</b></div>').join('')+'</div></article><article class="record-card"><p class="eyebrow">练习记录</p><h2>最近模拟考试</h2><div class="mini-list">'+(exams.length?exams.map(e=>'<div><span>'+e.date+'</span><b>'+e.score+'分 · 损失¥'+e.loss+'</b></div>').join(''):'<p class="lead">还没有考试记录。</p>')+'</div><h2 style="margin-top:28px">累计错题</h2><div class="big-number">'+(state.wrong||[]).length+'</div><p class="lead">历史模拟损失合计 ¥'+(state.lifetime||0)+'，仅为游戏数值。</p><div class="actions"><a class="btn primary" href="#exam">参加模拟考试</a></div></article>'}
-function route(){const hash=(location.hash||'#home').slice(1),parts=hash.split('/'),name=parts[0];document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+name));answerLocked=false;if(name==='cmf'){$('cmfPage').classList.add('active');renderCmfLab()}else if(name==='learn'){$('learnPage').classList.add('active');renderModules()}else if(name==='lesson'){$('lessonPage').classList.add('active');renderLesson(parts[1])}else if(name==='practice'){$('practicePage').classList.add('active');if(!practiceOrder.length)renderPracticeHome()}else if(name==='exam'){$('examPage').classList.add('active');if(!examOrder.length||examIndex>=examOrder.length)renderExamHome()}else if(name==='record'){$('recordPage').classList.add('active');renderRecord()}else{$('homePage').classList.add('active');updateStats()}window.scrollTo({top:0,behavior:'smooth'})}
-window.addEventListener('hashchange',route);updateStats();renderModules();route();
+const singlePageTargets={home:'homePage',cmf:'cmfPage',learn:'learnPage',practice:'practicePage',record:'recordPage',exam:'examPage'};
+function route(){const name=(location.hash||'#home').slice(1).split('/')[0];answerLocked=false;if(name==='cmf')renderCmfLab();else if(name==='learn')renderModules();else if(name==='practice'&&!practiceOrder.length)renderPracticeHome();else if(name==='record')renderRecord();else if(name==='exam'&&(!examOrder.length||examIndex>=examOrder.length))renderExamHome();const target=$(singlePageTargets[name]||'homePage');if(location.hash&&target)requestAnimationFrame(()=>target.scrollIntoView({behavior:'smooth',block:'start'}))}
+window.addEventListener('hashchange',route);updateStats();renderCmfLab();renderModules();renderPracticeHome();renderRecord();renderExamHome();route();
 </script>
 </body>
 </html>
