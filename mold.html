@@ -119,12 +119,14 @@ html{background:var(--bg)}body{background:radial-gradient(circle at 10% 0,#fff 0
 .mold-metrics{margin-top:32px;border-radius:20px}.mold-metrics div{min-height:148px;padding:24px 26px}.mold-metrics span{font-size:14px;line-height:1.45}.mold-metrics b{margin-top:14px;font-size:19px;line-height:1.55}.mold-takeaways{gap:16px;margin:28px 0 38px}.mold-takeaway{min-height:190px;padding:28px 30px;border-radius:22px}.mold-takeaway span{font-size:13px;line-height:1.4}.mold-takeaway h4{margin:34px 0 0;font-size:23px;line-height:1.5}.mold-term{text-underline-offset:4px}
 .mold-topic-tab small{font-size:12px}.mold-topic-tags span{font-size:13px}.mold-detail-label small{font-size:13px}.mold-drawer summary{font-size:16px}.mold-drawer .drawer-body{font-size:15px}.mold-case-head p{font-size:15px}.mold-case-points span{font-size:13px}.mold-case-points b{font-size:16px}
 @media(max-width:1050px){.mold-metrics div{min-height:132px}.mold-takeaway{min-height:170px;padding:24px}.mold-takeaway h4{font-size:21px}}
-@media(max-width:680px){.mold-metrics div{min-height:0;padding:20px}.mold-metrics b{font-size:18px}.mold-takeaway{min-height:0}.mold-takeaway h4{margin-top:22px;font-size:20px}}</style>
+@media(max-width:680px){.mold-metrics div{min-height:0;padding:20px}.mold-metrics b{font-size:18px}.mold-takeaway{min-height:0}.mold-takeaway h4{margin-top:22px;font-size:20px}}/* Gate-to-weld visual explanation v59 */
+.flow-cause-svg,.flow-result-svg{width:100%;height:260px;overflow:visible}.flow-cause-svg text,.flow-result-svg text{font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:13px;font-weight:800}.flow-cause-svg .molded-part{fill:#e4ddd5;stroke:#bfb5aa;stroke-width:3}.flow-cause-svg .inner-feature{fill:#fffaf6;stroke:#8d847b;stroke-width:3;stroke-dasharray:6 5}.flow-cause-svg .flow-path{fill:none;stroke:#d27b6d;stroke-width:11;stroke-linecap:round;opacity:.9}.flow-cause-svg .gate-ring{fill:#fff;stroke:#ba4940;stroke-width:4}.flow-cause-svg .gate-core{fill:#ba4940}.flow-cause-svg .meeting-halo{fill:#f3d8d3;stroke:#ba4940;stroke-width:3}.flow-cause-svg .meeting-core{fill:#ba4940}.flow-cause-svg .weld-stroke{fill:none;stroke:#9f352f;stroke-width:5;stroke-linecap:round}.flow-cause-svg .flow-text{fill:#a34a42}.flow-cause-svg .plain-text{fill:#5f5852}.flow-cause-svg .pill{fill:#181614}.flow-cause-svg .pill-text{fill:#fff;font-size:12px}.flow-result-svg .surface{fill:url(#surfaceFinish);stroke:#cfc6bd;stroke-width:3}.flow-result-svg .view-zone{fill:none;stroke:#9f958c;stroke-width:2;stroke-dasharray:7 6}.flow-result-svg .risk-halo{fill:#efd2cd;opacity:.72}.flow-result-svg .weld-visible{fill:none;stroke:#b9473e;stroke-width:6;stroke-linecap:round;filter:url(#weldGlow)}.flow-result-svg .surface-label{fill:#5d554f}.flow-result-svg .risk-label{fill:#fff;font-size:12px}.flow-result-svg .risk-pill{fill:#181614}.flow-principle{display:flex;align-items:center;gap:8px;margin-top:10px;padding:10px 14px;border-left:4px solid var(--red);background:#f3ece6;color:#5f5852;font-size:13px;line-height:1.5}.flow-principle b{color:var(--ink)}.cmf-exp-controls.flow-controls button{font-size:15px}.cmf-exp-controls.flow-controls button b{display:none}
+@media(max-width:720px){.flow-cause-svg,.flow-result-svg{height:235px}.flow-cause-svg text,.flow-result-svg text{font-size:12px}}</style>
 </head>
 <body class="single-flow">
 <header class="top">
 <a class="brand" href="#home"><span class="logo">CMF</span><span>个护模具实验室</span></a>
-<nav class="nav main-module-nav" aria-label="CMF 三大模块"><a href="index.html?v=58#theory">材料</a><a class="active" href="#home">模具</a><a href="surface.html?v=58">表面工艺</a></nav>
+<nav class="nav main-module-nav" aria-label="CMF 三大模块"><a href="index.html?v=59#theory">材料</a><a class="active" href="#home">模具</a><a href="surface.html?v=59">表面工艺</a></nav>
 <div class="loss-pill">本次模拟损失 <b id="headerLoss">¥0</b></div>
 </header>
 <main>
@@ -135,7 +137,7 @@ html{background:var(--bg)}body{background:radial-gradient(circle at 10% 0,#fff 0
 </section>
 <section class="page" id="cmfPage">
 <div class="cmf-page-head"><div><p class="eyebrow">CMF MOLD VISUAL LAB</p><h1 class="page-title">模具不是后台参数，<br>它会留在产品表面。</h1></div><p class="lead">一次只改变一个条件。先看样件发生了什么，再读原因、沟通对象和验证动作。</p></div>
-<div class="cmf-lab-shell"><aside class="cmf-exp-tabs" id="cmfExpTabs" aria-label="选择实验"><button class="active" data-exp="sink"><span>01</span><b>筋位与缩水</b><small>厚胶如何映到 A 面</small></button><button data-exp="flow"><span>02</span><b>浇口与焊接线</b><small>流动路径怎样留下痕迹</small></button><button data-exp="texture"><span>03</span><b>纹理与拔模</b><small>为什么会拉伤、发白</small></button><button data-exp="parting"><span>04</span><b>分型线位置</b><small>哪条边更容易被看见</small></button></aside>
+<div class="cmf-lab-shell"><aside class="cmf-exp-tabs" id="cmfExpTabs" aria-label="选择实验"><button class="active" data-exp="sink"><span>01</span><b>筋位与缩水</b><small>厚胶如何映到 A 面</small></button><button data-exp="flow"><span>02</span><b>浇口与焊接线</b><small>浇口怎样决定焊接线位置</small></button><button data-exp="texture"><span>03</span><b>纹理与拔模</b><small>为什么会拉伤、发白</small></button><button data-exp="parting"><span>04</span><b>分型线位置</b><small>哪条边更容易被看见</small></button></aside>
 <article class="cmf-exp-work"><header class="cmf-exp-head"><div><p class="eyebrow" id="cmfExpKicker">EXPERIMENT 01</p><h2 id="cmfExpTitle">筋位与缩水</h2></div><p id="cmfExpIntro">改变背面筋厚，观察同一外观面是否出现凹影。</p></header><div class="cmf-visual-stage" id="cmfVisualStage" role="img" aria-live="polite"></div><div class="cmf-control-block"><div class="cmf-step-label"><span>STEP 03</span><b>只改变一个条件</b><small>保持材料、颜色、纹理与观察光线不变</small></div><div class="cmf-exp-controls" id="cmfExpControls"></div></div><div class="cmf-result-heading"><span>STEP 04</span><b>把视觉变化翻译成设计判断</b></div><div class="cmf-exp-result" aria-live="polite"><div class="cmf-verdict"><span>当前判断</span><b id="cmfVerdict">—</b></div><div><span>眼睛会看见</span><b id="cmfVisible">—</b></div><div><span>为什么发生</span><b id="cmfMechanism">—</b></div><div><span>CMF 去找谁</span><b id="cmfOwner">—</b></div><div><span>下一步验证</span><b id="cmfVerify">—</b></div></div></article></div>
 <p class="cmf-source-note"><b>阅读依据：</b><a href="https://www.protolabs.com/services/injection-molding/plastic-injection-molding/design-guidelines/" target="_blank" rel="noreferrer">Protolabs 注塑设计指南</a><span>·</span><a href="https://www.protolabs.com/resources/guides-and-trend-reports/enhancing-cosmetic-appearance-on-molded-parts/" target="_blank" rel="noreferrer">外观缺陷指南</a><span>·</span><a href="https://solutions.covestro.com/-/media/covestro/solution-center/whitepapers/gate-design-for-high-quality-surface-finish.pdf" target="_blank" rel="noreferrer">Covestro 浇口与表面质量</a>。数值仅作趋势教学，最终以材料、纹理规范、模流与试模为准。</p>
 </section>
@@ -221,7 +223,7 @@ function answerLesson(id,choice){if(answerLocked)return;answerLocked=true;const 
 
 const cmfExperiments={
 sink:{kicker:'EXPERIMENT 01',title:'筋位与缩水',intro:'改变背面筋厚，观察同一外观面是否出现凹影。',mode:'ratio',choices:[['0.5T','常见起点'],['0.8T','风险上升'],['1.0T','明显厚胶']]},
-flow:{kicker:'EXPERIMENT 02',title:'浇口与焊接线',intro:'移动浇口与汇流位置，观察痕迹会落在哪个区域。',mode:'gate',choices:[['hidden','背面中部浇口'],['end','端部浇口'],['dual','对向双浇口']]},
+flow:{kicker:'EXPERIMENT 02',title:'浇口与焊接线',intro:'浇口决定熔体从哪里进入；料流重新汇合的位置，才是焊接线风险区。',mode:'gate',choices:[['hidden','背面中部浇口'],['end','端部浇口'],['dual','对向双浇口']]},
 texture:{kicker:'EXPERIMENT 03',title:'纹理与拔模',intro:'纹理越深，脱模时越需要足够的拔模空间。',mode:'texture'},
 parting:{kicker:'EXPERIMENT 04',title:'分型线位置',intro:'把同一条制造边界放到不同区域，判断它是否会变成外观焦点。',mode:'parting',choices:[['face','外观正面'],['edge','侧边轮廓'],['boundary','色彩 / 装配边界']]}
 };
@@ -315,6 +317,49 @@ function renderTextureLab(previewOnly){
   $('cmfExpControls').innerHTML='<label class="texture-select-control"><span>纹理</span><select onchange="setCmfTexture(this.value)"><option value="smooth" '+(cmfState.texture==='smooth'?'selected':'')+'>光面</option><option value="fine" '+(cmfState.texture==='fine'?'selected':'')+'>细纹</option><option value="coarse" '+(cmfState.texture==='coarse'?'selected':'')+'>粗纹</option></select></label><label class="draft-control"><span>拔模角</span><input type="range" min="1" max="6" step="1" value="'+cmfState.draft+'" style="--draft-progress:'+((cmfState.draft-1)/5*100)+'%" oninput="previewCmfDraft(this.value,this)" aria-label="拔模角"><output>'+cmfState.draft+'°</output></label>'
  }
  setCmfResult(verdict,risk?'侧壁出现竖向拉痕、发白或光泽变化':'纹理与光泽较完整','纹理凹凸会咬住模面；纹理越深通常越需要更大拔模角','ID / 结构 / 模具纹理供应商','按选定纹理编号、深度、材料与供应商规范做拔模确认')
+}
+/* Causal gate and weld-line renderer v59 */
+function renderFlowLab(e){
+ const d={
+  hidden:{
+   feature:true,
+   gates:[{x:220,y:232,tx:220,ty:258,anchor:'middle'}],
+   paths:['M220 220 C150 208 112 172 125 118 C136 78 170 54 220 50','M220 220 C290 208 328 172 315 118 C304 78 270 54 220 50'],
+   labels:[{x:118,y:188,t:'料流 ①'},{x:286,y:188,t:'料流 ②'}],
+   meet:{x:220,y:50,pillX:244,pillY:33,weld:'M220 32 L238 66'},
+   risk:{halo:'<ellipse class="risk-halo" cx="356" cy="92" rx="40" ry="58"/>',line:'M350 54 L366 126',pillX:276,pillY:190,label:'侧后区：仍需确认'},
+   v:'可进入方案验证',see:'主视面痕迹较少，侧后区仍需检查',why:'背面进胶后，料流绕过孔位或筋位并在侧后区重新汇合',owner:'模具 / 注塑 / CMF',verify:'模流预测 + 首轮试模确认浇口印与焊接线'
+  },
+  end:{
+   feature:true,
+   gates:[{x:48,y:135,tx:72,ty:122,anchor:'start'}],
+   paths:['M62 135 C92 72 150 58 212 72 C292 90 340 92 402 125','M62 135 C92 198 150 212 212 198 C292 180 340 178 402 145'],
+   labels:[{x:110,y:82,t:'料流 ①'},{x:110,y:207,t:'料流 ②'}],
+   meet:{x:402,y:135,pillX:294,pillY:30,weld:'M402 108 L402 162'},
+   risk:{halo:'<ellipse class="risk-halo" cx="390" cy="130" rx="36" ry="88"/>',line:'M390 76 L390 184',pillX:286,pillY:202,label:'远端：焊线 / 困气'},
+   v:'外观风险偏高',see:'远端可能出现焊接线、缺胶或烧焦',why:'端部进胶使流程更长，料流绕过结构后在远端汇合，温压下降且更易积气',owner:'模具浇口与排气负责人',verify:'模流 + 远端排气与外观样板'
+  },
+  dual:{
+   feature:false,
+   gates:[{x:48,y:135,tx:72,ty:122,anchor:'start'},{x:412,y:135,tx:388,ty:122,anchor:'end'}],
+   paths:['M62 135 C122 92 174 92 220 135','M398 135 C338 178 286 178 220 135'],
+   labels:[{x:116,y:94,t:'料流 ①'},{x:298,y:186,t:'料流 ②'}],
+   meet:{x:220,y:135,pillX:250,pillY:64,weld:'M220 92 L220 178'},
+   risk:{halo:'<ellipse class="risk-halo" cx="230" cy="130" rx="42" ry="94"/>',line:'M230 52 L230 208',pillX:160,pillY:216,label:'中央：焊接线最醒目'},
+   v:'中央焊接线明确',see:'正中可能出现细线、色差或光泽差',why:'两个浇口形成相向料流，两股熔体在部件中央重新汇合',owner:'模具 / 注塑 / CMF',verify:'调整浇口或把汇合位置移出主视区'
+  }
+ }[cmfState.gate];
+ const gateSvg=d.gates.map(g=>'<g><circle class="gate-ring" cx="'+g.x+'" cy="'+g.y+'" r="14"/><circle class="gate-core" cx="'+g.x+'" cy="'+g.y+'" r="5"/><text class="plain-text" x="'+g.tx+'" y="'+g.ty+'" text-anchor="'+g.anchor+'">浇口</text></g>').join('');
+ const paths=d.paths.map(p=>'<path class="flow-path" d="'+p+'" marker-end="url(#flowArrow)"/>').join('');
+ const labels=d.labels.map(x=>'<text class="flow-text" x="'+x.x+'" y="'+x.y+'">'+x.t+'</text>').join('');
+ const feature=d.feature?'<circle class="inner-feature" cx="220" cy="135" r="43"/><text class="plain-text" x="220" y="131" text-anchor="middle">孔位 / 筋位</text><text class="plain-text" x="220" y="149" text-anchor="middle">使料流分开</text>':'<text class="plain-text" x="220" y="36" text-anchor="middle">两处浇口同时进胶</text>';
+ const process='<svg class="flow-cause-svg" viewBox="0 0 460 270" aria-hidden="true"><defs><marker id="flowArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#d27b6d"/></marker></defs><rect class="molded-part" x="34" y="20" width="392" height="224" rx="44"/>'+feature+paths+labels+gateSvg+'<circle class="meeting-halo" cx="'+d.meet.x+'" cy="'+d.meet.y+'" r="15"/><circle class="meeting-core" cx="'+d.meet.x+'" cy="'+d.meet.y+'" r="6"/><path class="weld-stroke" d="'+d.meet.weld+'"/><rect class="pill" x="'+d.meet.pillX+'" y="'+d.meet.pillY+'" width="82" height="28" rx="14"/><text class="pill-text" x="'+(d.meet.pillX+41)+'" y="'+(d.meet.pillY+19)+'" text-anchor="middle">重新汇合</text></svg>';
+ const result='<svg class="flow-result-svg" viewBox="0 0 460 270" aria-hidden="true"><defs><linearGradient id="surfaceFinish" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d6d0ca"/><stop offset=".48" stop-color="#fbf8f4"/><stop offset="1" stop-color="#c7beb6"/></linearGradient><filter id="weldGlow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect class="surface" x="34" y="20" width="392" height="224" rx="44"/><rect class="view-zone" x="84" y="54" width="292" height="154" rx="28"/><text class="surface-label" x="96" y="46">主视 A 面</text>'+d.risk.halo+'<path class="weld-visible" d="'+d.risk.line+'"/><rect class="risk-pill" x="'+d.risk.pillX+'" y="'+d.risk.pillY+'" width="156" height="30" rx="15"/><text class="risk-label" x="'+(d.risk.pillX+78)+'" y="'+(d.risk.pillY+20)+'" text-anchor="middle">'+d.risk.label+'</text></svg>';
+ $('cmfVisualStage').innerHTML='<div class="lab-compare">'+labPanel('STEP 01','先看料流如何分开和汇合',process,'关键规律','焊接线出现在两股料流重新汇合处')+labPanel('STEP 02','再看汇合线落在 A 面哪里',result,'设计判断','汇合点是否位于主视区')+'</div>';
+ $('cmfVisualStage').setAttribute('aria-label',e.choices.find(x=>x[0]===cmfState.gate)[1]+'的浇口、料流路径、汇合点和A面焊接线位置');
+ $('cmfExpControls').className='cmf-exp-controls flow-controls';
+ $('cmfExpControls').innerHTML=e.choices.map(item=>'<button class="'+(item[0]===cmfState.gate?'active':'')+'" onclick="setCmfChoice(\'gate\',\''+item[0]+'\')">'+item[1]+'</button>').join('');
+ setCmfResult(d.v,d.see,d.why,d.owner,d.verify)
 }function shuffle(a){const out=[...a];for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out}
 function prepareQuestions(pool,count){const selected=shuffle(pool).slice(0,count),positions=shuffle(Array.from({length:count},(_,i)=>i%4));return selected.map((q,i)=>{const correct=q.opts[q.c],wrong=shuffle(q.opts.filter((_,idx)=>idx!==q.c)),opts=[];let w=0;for(let p=0;p<4;p++)opts[p]=p===positions[i]?correct:wrong[w++];return {...q,opts,c:positions[i]}})}
 function buildSession(pool,count,key){const recent=new Set(state[key]||[]),fresh=pool.filter(q=>!recent.has(q.id)),source=fresh.length>=count?fresh:pool,prepared=prepareQuestions(source,count);state[key]=prepared.map(q=>q.id);save();return prepared}
